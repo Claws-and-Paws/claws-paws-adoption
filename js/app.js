@@ -9,20 +9,21 @@ let petArray = [];
 function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
     console.log("🚀 ~ file: app.js:10 ~ Pet ~ Pet:", Pet)
     this.name = name;
+    this.imgSrc = imgSrc;
     this.type = type;
+    this.gender = gender;
     this.breed = breed;
     this.age = age;
-    this.gender = gender;
     this.kidFriendly = kidFriendly;
     this.petFriendly = petFriendly;
-    this.imgSrc = imgSrc;
+
     petArray.push(this);
 
 }
 
 
 
-let petProfiles =  [
+let petProfiles = [
     {
         name: 'Duke',
         imgSrc: '../images/duke-dog.png',
@@ -222,56 +223,62 @@ let petProfiles =  [
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
 
-    } ]
+    }, 
+]
 console.log("🚀 ~ file: app.js:227 ~ petProfiles:", petProfiles);
 
 
+function newPetObjects() {
+    for(let i = 0; i< petProfiles.length; i++) {
 
-for(let i = 0; i < petProfiles.length; i++){
-
-    petArray.push(new Pet(petProfiles[i].name, imgSrc, gender, breed, type));
+    petArray.push(new Pet(petProfiles[i].name, petProfiles[i].imgSrc, petProfiles[i].type, petProfiles[i].breed, petProfiles[i].gender, petProfiles[i].age));
 }
+};
+
 
 
 
 console.log("🚀 ~ file: app.js:7 ~ petArray:", petArray)
 
 function renderPetProfiles() {
-console.log("🚀 ~ file: app.js:235 ~ renderPetProfiles ~ renderPetProfiles:", renderPetProfiles);
+    console.log("🚀 ~ file: app.js:235 ~ renderPetProfiles ~ renderPetProfiles:", renderPetProfiles);
 
-    // for (let i = o; i < petArray.length; i++) {
-    //     petArray[i].render(),
-    // }
-    // let parentElement = document.getElementById('our-pets'),
+    for (let i = o; i < petArray.length; i++) {
+        petArray[i].render();
 
-    // let div = document.createElement('div'),
-    // parentElement.appendChild(div),
+        let parentElement = document.getElementById('our-pets');
 
-    // let h2 = document.createElement('h2'),
-    // h2.textContent = this.petName,
-    // div.appendChild(h2),
+        let div = document.createElement('div');
+        parentElement.appendChild(div);
 
-    // let petPara = document.createElement('p'),
-    // petPara.textContent = 'Pet\'s age is' + this.age,
-    // div.appendChild(petPara),
+        let h2 = document.createElement('h2');
+        h2.textContent = this.petName;
+        div.appendChild(h2);
 
-    // let petUl = document.createElement('ul'),
-    // div.appendChild(petUl),
+        let petPara = document.createElement('p');
+        petPara.textContent = 'Pet\'s age is' + this.age;
+        div.appendChild(petPara);
 
-    // let breedLi = document.createElement('li'),
-    // breedLi.textContent = this.breed,
-    // petUl.appendChild(breedLi),
+        let petUl = document.createElement('ul');
+        div.appendChild(petUl);
 
-    // let typeLi = document.createElement('li'),
-    // typeLi.textContent = this.type,
-    // petUl.appendChild(typeLi),
+        let breedLi = document.createElement('li');
+        breedLi.textContent = this.breed;
+        petUl.appendChild(breedLi);
+
+        let typeLi = document.createElement('li');
+        typeLi.textContent = this.type;
+        petUl.appendChild(typeLi);
+
+
+
+    }
 
 }
 
-let petImg = document.createElement('img'),
-petImg.setAttribute('src', 'images/' + this.imgSrc + '.png');
-petImg.setAttribute('alt', 'Adopt a pet today!');
-div.appendChild(petImg);
+
+
+
 
 
 
