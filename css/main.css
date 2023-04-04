@@ -1,0 +1,101 @@
+.page {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: bisque;
+}
+
+.header {
+    height: 500px;
+    border: 1px solid red;
+}
+
+.nav {
+    height: 200px;
+}
+
+.nav__links {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    gap: 20px;
+    list-style-type: none;
+    padding-top: 20px;
+}
+
+.nav__link{
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.nav__link:hover {
+    opacity: 0.7;
+}
+
+.user-form{
+    height: 600px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.our-pets{
+    height: 600px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 300px;
+    border: 1px solid red;
+}
+
+.partners__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+}
+
+.partners__list-item {
+    text-decoration: none;
+}
+
+.partners__list-item:hover {
+    opacity: 0.7;
+}
+
+
+
+.footer__lists {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.footer__text {
+    padding: 10px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+
+.socials__links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.socials__link {
+    text-decoration: none;
+}
+
+.socials__link:hover {
+    opacity: 0.7;
+}
