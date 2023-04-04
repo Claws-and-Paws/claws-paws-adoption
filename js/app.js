@@ -229,7 +229,7 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
 
 function newPetObjects() {
     for (let i = 0; i < petProfiles.length; i++) {
-    new Pet(petProfiles[i].name, petProfiles[i].imgSrc, petProfiles[i].type, petProfiles[i].breed, petProfiles[i].gender, petProfiles[i].age);
+    new Pet(petProfiles[i].name, petProfiles[i].imgSrc, petProfiles[i].type, petProfiles[i].gender, petProfiles[i].breed, petProfiles[i].age, petProfiles[i].kidFriendly, petProfiles[i].petFriendly);
     }
  
 }
@@ -272,6 +272,19 @@ Pet.prototype.render = function () {
     let typeLi = document.createElement('li');
     typeLi.textContent = this.type;
     petUl.appendChild(typeLi);
+
+    let genderLi = document.createElement('li');
+    typeLi.textContent = this.gender;
+    petUl.appendChild(genderLi);
+
+    let kidLi = document.createElement('li');
+    typeLi.textContent = this.kidFriendly;
+    petUl.appendChild(kidLi);
+
+    let petLi = document.createElement('li');
+    typeLi.textContent = this.petFriendly;
+    petUl.appendChild(petLi);
+
 
 
 
