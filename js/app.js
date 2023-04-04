@@ -6,7 +6,7 @@ console.log('dawgs baby!')
 let petArray = [];
 
 
-function Pet(petName, imgSrc, type, breed, age, gender, kidFriendly, petFriendly){
+function Pet(petName, imgSrc, type, breed, age, gender, kidFriendly, petFriendly) {
     console.log("🚀 ~ file: app.js:10 ~ Pet ~ Pet:", Pet)
     this.petName = petName
     this.type = type
@@ -20,4 +20,24 @@ function Pet(petName, imgSrc, type, breed, age, gender, kidFriendly, petFriendly
 
 }
 
-let newPet = Pet()
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
+let newPet = Pet();
