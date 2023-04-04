@@ -259,7 +259,7 @@ Pet.prototype.render = function () {
     div.appendChild(h2);
 
     let petPara = document.createElement('p');
-    petPara.textContent = 'Pet\'s age is' + this.age;
+    petPara.textContent = 'Pet\'s age is ' + this.age;
     div.appendChild(petPara);
 
     let petUl = document.createElement('ul');
