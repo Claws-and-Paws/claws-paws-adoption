@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 console.log('dawgs baby!');
 
 
@@ -127,7 +127,7 @@ let petProfiles = [
         name: 'Andi',
         imgSrc: '../images/andi-cat.png',
         type: 'Cat',
-        gender: 'Female',
+               gender: 'Female',
         breed: 'Domestic Short Hair',
         age: 416, //weeks old
         kidFriendly: 'Yes',
@@ -223,17 +223,17 @@ let petProfiles = [
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
 
-    }, 
+    }
 ]
 console.log("🚀 ~ file: app.js:227 ~ petProfiles:", petProfiles);
 
 
 function newPetObjects() {
-    for(let i = 0; i< petProfiles.length; i++) {
+    for (let i = 0; i < petProfiles.length; i++) {
 
-    petArray.push(new Pet(petProfiles[i].name, petProfiles[i].imgSrc, petProfiles[i].type, petProfiles[i].breed, petProfiles[i].gender, petProfiles[i].age));
+        petArray.push(new Pet(petProfiles[i].name, petProfiles[i].imgSrc, petProfiles[i].type, petProfiles[i].breed, petProfiles[i].gender, petProfiles[i].age));
+    }
 }
-};
 
 
 
@@ -246,29 +246,6 @@ function renderPetProfiles() {
     for (let i = o; i < petArray.length; i++) {
         petArray[i].render();
 
-        let parentElement = document.getElementById('our-pets');
-
-        let div = document.createElement('div');
-        parentElement.appendChild(div);
-
-        let h2 = document.createElement('h2');
-        h2.textContent = this.petName;
-        div.appendChild(h2);
-
-        let petPara = document.createElement('p');
-        petPara.textContent = 'Pet\'s age is' + this.age;
-        div.appendChild(petPara);
-
-        let petUl = document.createElement('ul');
-        div.appendChild(petUl);
-
-        let breedLi = document.createElement('li');
-        breedLi.textContent = this.breed;
-        petUl.appendChild(breedLi);
-
-        let typeLi = document.createElement('li');
-        typeLi.textContent = this.type;
-        petUl.appendChild(typeLi);
 
 
 
@@ -277,6 +254,39 @@ function renderPetProfiles() {
 }
 
 
+Pet.prototype.render = function () {
+    let parentElement = document.getElementById('our-pets');
+
+    let div = document.createElement('div');
+    parentElement.appendChild(div);
+
+    let h2 = document.createElement('h2');
+    h2.textContent = this.petName;
+    div.appendChild(h2);
+
+    let petPara = document.createElement('p');
+    petPara.textContent = 'Pet\'s age is' + this.age;
+    div.appendChild(petPara);
+
+    let petUl = document.createElement('ul');
+    div.appendChild(petUl);
+
+    let breedLi = document.createElement('li');
+    breedLi.textContent = this.breed;
+    petUl.appendChild(breedLi);
+
+    let typeLi = document.createElement('li');
+    typeLi.textContent = this.type;
+    petUl.appendChild(typeLi);
+
+
+
+    let imgSrc = document.createElement('img');
+    imgSrc.setAttribute('src', 'images/' + this.imgSrc + '.png');
+    imgSrc.setAttribute('alt', 'Adopt a pet today!');
+    div.appendChild(imgSrc);
+
+}
 
 
 
