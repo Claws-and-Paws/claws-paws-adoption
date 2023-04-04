@@ -1,6 +1,5 @@
-
 'use strict'
-console.log('dawgs baby!')
+console.log('dawgs baby!');
 
 
 
@@ -24,6 +23,7 @@ function Pet(petName, imgSrc, type, breed, age, gender, kidFriendly, petFriendly
 
 
 let petProfiles = [
+    console.log('petssss');
     {
         name: 'Duke',
         imgSrc: '../images/duke-dog.png',
@@ -33,7 +33,7 @@ let petProfiles = [
         age: 104, //weeks old
         kidFriendly: 'Prefers home without children',
         petFriendly: 'Good with other dogs, cats',
-    },{
+    }, {
         name: 'Nikki',
         imgSrc: '../images/nikki-dog.png',
         type: 'Dog',
@@ -42,8 +42,8 @@ let petProfiles = [
         age: 156, //weeks old
         kidFriendly: 'Good with children',
         petFriendly: 'Good with other dogs, cats',
-        
-    },{
+
+    }, {
         name: 'Storm',
         imgSrc: '../images/storm-dog.png',
         type: 'Dog',
@@ -52,8 +52,8 @@ let petProfiles = [
         age: 12, //weeks old 
         kidFriendly: 'Good with children',
         petFriendly: 'Good with other dogs, cats, and other animals',
-        
-    },{
+
+    }, {
         name: 'Mabel',
         imgSrc: '../images/mabel-dog.png',
         type: 'Dog',
@@ -62,8 +62,8 @@ let petProfiles = [
         age: 44, //weeks old
         kidFriendly: 'Good with children',
         petFriendly: 'Good with other dogs, cats',
-        
-    },{
+
+    }, {
         name: 'Knox',
         imgSrc: '../images/knox-dog.png',
         type: 'Dog',
@@ -72,8 +72,8 @@ let petProfiles = [
         age: 104, //weeks old
         kidFriendly: 'Good with children',
         petFriendly: 'Good with other dogs',
-        
-    },{
+
+    }, {
         name: 'Bleu',
         imgSrc: '../images/bleu-dog.png',
         type: 'Dog',
@@ -82,8 +82,8 @@ let petProfiles = [
         age: 104, //weeks old
         kidFriendly: 'Good with children',
         petFriendly: 'Good with other dogs',
-        
-    },{
+
+    }, {
         name: 'Talor',
         imgSrc: '../images/talor-dog.png',
         type: 'Dog',
@@ -92,8 +92,8 @@ let petProfiles = [
         age: 312, //weeks old
         kidFriendly: 'No',
         petFriendly: 'Good with other dogs, cats',
-    
-    },{
+
+    }, {
         name: 'Kingston',
         imgSrc: '../images/kingston-dog.png',
         type: 'Dog',
@@ -102,8 +102,8 @@ let petProfiles = [
         age: 208, //weeks old
         kidFriendly: 'Yes',
         petFriendly: 'Good with other dogs',
-        
-    },{
+
+    }, {
         name: 'Amy',
         imgSrc: '../images/amy-dog.png',
         type: 'Dog',
@@ -112,8 +112,8 @@ let petProfiles = [
         age: '5 months old',
         kidFriendly: 'Yes',
         petFriendly: 'Good with other dogs',
-        
-    },{
+
+    }, {
         name: 'Gizmo',
         imgSrc: '../images/gizmo-dog.png',
         type: 'Dog',
@@ -122,8 +122,8 @@ let petProfiles = [
         age: 156, //weeks old
         kidFriendly: 'Yes',
         petFriendly: 'Good with other dogs, cats',
-        
-    },{
+
+    }, {
         name: 'Andi',
         imgSrc: '../images/andi-cat.png',
         type: 'Cat',
@@ -132,8 +132,8 @@ let petProfiles = [
         age: 416, //weeks old
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
-        
-    },{
+
+    }, {
         name: 'Cade',
         imgSrc: '../images/cade-cat.png',
         type: 'Cat',
@@ -142,8 +142,8 @@ let petProfiles = [
         age: 364, //weeks old
         kidFriendly: 'No',
         petFriendly: 'Good with cats',
-        
-    },{
+
+    }, {
         name: 'Dixie',
         imgSrc: '../images/dixie-cat.png',
         type: 'Cat',
@@ -152,8 +152,8 @@ let petProfiles = [
         age: 468, //weeks old
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
-        
-    },{
+
+    }, {
         name: 'Mowgli',
         imgSrc: '../images/mowgli-cat.png',
         type: 'Cat',
@@ -162,7 +162,7 @@ let petProfiles = [
         age: 156, //weeks old
         kidFriendly: 'No',
         petFriendly: 'No',
-        
+
     }, {
         name: 'Sienna',
         imgSrc: '../images/sienna-cat.png',
@@ -172,8 +172,8 @@ let petProfiles = [
         age: 78, //weeks old
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
-        
-    },{
+
+    }, {
         name: 'Simba',
         imgSrc: '../images/simba-cat.png',
         type: 'Cat',
@@ -182,8 +182,8 @@ let petProfiles = [
         age: 52,
         kidFriendly: 'Yes',
         petFriendly: 'No',
-        
-    },{
+
+    }, {
         name: 'Trixie',
         imgSrc: '../images/trixie-cat.png',
         type: 'Cat',
@@ -192,8 +192,8 @@ let petProfiles = [
         age: 520,
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
-        
-    },{
+
+    }, {
         name: 'Plano',
         imgSrc: '../images/plano-cat.png',
         type: 'Cat',
@@ -202,8 +202,8 @@ let petProfiles = [
         age: 52,
         kidFriendly: 'No',
         petFriendly: 'Yes',
-        
-    },{
+
+    }, {
         name: 'Pepper Jack',
         imgSrc: '../images/pepper-jack-cat.png',
         type: 'Cat',
@@ -212,8 +212,8 @@ let petProfiles = [
         age: 28,
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
-        
-    },{
+
+    }, {
         name: 'Mildred',
         imgSrc: '../images/mildred-cat.png',
         type: 'Cat',
@@ -222,9 +222,12 @@ let petProfiles = [
         age: 520,
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
-        
+
     }
 ];
+console.log("🚀 ~ file: app.js:227 ~ petProfiles:", petProfiles)
+console.log("🚀 ~ file: app.js:227 ~ petProfiles:", petProfiles)
+console.log("🚀 ~ file: app.js:227 ~ petProfiles:", petProfiles)
 
 
 
@@ -232,30 +235,35 @@ let petProfiles = [
 
 
 
-Pet.prototype.render = function(){
-let parentElement = document.getElementById('our-pets');
+function renderPetProfiles() {
+console.log("🚀 ~ file: app.js:235 ~ renderPetProfiles ~ renderPetProfiles:", renderPetProfiles);
 
-let div = document.createElement('div');
-parentElement.appendChild(div);
+    for (let i = o; i < petArray.length; i++) {
+        petArray[i].render();
+    }
+    let parentElement = document.getElementById('our-pets');
 
-let h2 = document.createElement('h2');
-h2.textContent = this.petName;
-div.appendChild(h2);
+    let div = document.createElement('div');
+    parentElement.appendChild(div);
 
-let petPara = document.createElement('p');
-petPara.textContent = 'Pet\'s age is' + this.age;
-div.appendChild(petPara);
+    let h2 = document.createElement('h2');
+    h2.textContent = this.petName;
+    div.appendChild(h2);
 
-let petUl = document.createElement('ul');
-div.appendChild(petUl);
+    let petPara = document.createElement('p');
+    petPara.textContent = 'Pet\'s age is' + this.age;
+    div.appendChild(petPara);
 
-let breedLi = document.createElement('li');
-breedLi.textContent = this.breed;
-petUl.appendChild(breedLi);
+    let petUl = document.createElement('ul');
+    div.appendChild(petUl);
 
-let typeLi = document.createElement('li');
-typeLi.textContent = this.type;
-petUl.appendChild(typeLi);
+    let breedLi = document.createElement('li');
+    breedLi.textContent = this.breed;
+    petUl.appendChild(breedLi);
+
+    let typeLi = document.createElement('li');
+    typeLi.textContent = this.type;
+    petUl.appendChild(typeLi);
 
 }
 
@@ -275,7 +283,6 @@ div.appendChild(petImg);
 
 
 
-} ///ends here
 
 
 
@@ -289,15 +296,6 @@ div.appendChild(petImg);
 
 
 
-
-
-
-
-
-
-// for(let i = o; i < petArray.length; i++) {
-//     petArray[i].render();
-// }
 
 // if petProfiles[age] > 8 && < 52 {
 //     let months = petProfiles[age]/4
