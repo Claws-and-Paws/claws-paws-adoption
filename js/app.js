@@ -20,24 +20,4 @@ function Pet(petName, imgSrc, type, breed, age, gender, kidFriendly, petFriendly
 
 }
 
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
-let newPet = Pet();
+
