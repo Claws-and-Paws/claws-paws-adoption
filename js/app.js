@@ -42,7 +42,7 @@ let petProfiles = [
         age: 156, //weeks old
         kidFriendly: 'Good with children',
         petFriendly: 'Good with other dogs, cats',
-        // Img: Url 'images/nikki-dog.png' alt = 'Nikki’s profile'
+        
     },{
         name: 'Storm',
         imgSrc: '../images/storm-dog.png',
@@ -52,7 +52,7 @@ let petProfiles = [
         age: 12, //weeks old 
         kidFriendly: 'Good with children',
         petFriendly: 'Good with other dogs, cats, and other animals',
-        // Img: Url 'images/storm-dog.png' alt = 'Storms profile'
+        
     },{
         name: 'Mabel',
         imgSrc: '../images/mabel-dog.png',
@@ -62,7 +62,7 @@ let petProfiles = [
         age: 44, //weeks old
         kidFriendly: 'Good with children',
         petFriendly: 'Good with other dogs, cats',
-        // Img: Url 'images/mabel-dog.png' alt = 'Mabel/'s profile'
+        
     },{
         name: 'Knox',
         imgSrc: '../images/knox-dog.png',
@@ -72,7 +72,7 @@ let petProfiles = [
         age: 104, //weeks old
         kidFriendly: 'Good with children',
         petFriendly: 'Good with other dogs',
-        // Img: Url 'images/knox-dog.png' alt = 'Knox/'s profile'
+        
     },{
         name: 'Bleu',
         imgSrc: '../images/bleu-dog.png',
@@ -82,7 +82,7 @@ let petProfiles = [
         age: 104, //weeks old
         kidFriendly: 'Good with children',
         petFriendly: 'Good with other dogs',
-        // Img: Url 'images/bleu-dog.png' alt = 'Bleu/'s profile;
+        
     },{
         name: 'Talor',
         imgSrc: '../images/talor-dog.png',
@@ -92,7 +92,7 @@ let petProfiles = [
         age: 312, //weeks old
         kidFriendly: 'No',
         petFriendly: 'Good with other dogs, cats',
-        // Img: Url 'images/talor-dog.png' alt = 'Talor/'s profile'
+    
     },{
         name: 'Kingston',
         imgSrc: '../images/kingston-dog.png',
@@ -102,7 +102,7 @@ let petProfiles = [
         age: 208, //weeks old
         kidFriendly: 'Yes',
         petFriendly: 'Good with other dogs',
-        // Img: Url 'images/kingston-dog.png' alt = 'Kingston/'s profile'
+        
     },{
         name: 'Amy',
         imgSrc: '../images/amy-dog.png',
@@ -112,7 +112,7 @@ let petProfiles = [
         age: '5 months old',
         kidFriendly: 'Yes',
         petFriendly: 'Good with other dogs',
-        // Img: Url 'images/amy-dog.png‘ alt = 'Amy/'s profile'
+        
     },{
         name: 'Gizmo',
         imgSrc: '../images/gizmo-dog.png',
@@ -122,7 +122,7 @@ let petProfiles = [
         age: 156, //weeks old
         kidFriendly: 'Yes',
         petFriendly: 'Good with other dogs, cats',
-        // Img: Url 'images/gizmo-dog.png' alt = 'Gizmo/'s profile'
+        
     },{
         name: 'Andi',
         imgSrc: '../images/andi-cat.png',
@@ -132,7 +132,7 @@ let petProfiles = [
         age: 416, //weeks old
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
-        // Img: Url 'images/andi-cat.png' alt = 'Andi/'s profile'
+        
     },{
         name: 'Cade',
         imgSrc: '../images/cade-cat.png',
@@ -142,7 +142,7 @@ let petProfiles = [
         age: 364, //weeks old
         kidFriendly: 'No',
         petFriendly: 'Good with cats',
-        // Img: Url 'images/cade-cat.png' alt = 'Cade/'s profile'
+        
     },{
         name: 'Dixie',
         imgSrc: '../images/dixie-cat.png',
@@ -152,7 +152,7 @@ let petProfiles = [
         age: 468, //weeks old
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
-        // Img: Url 'images/dixie-cat.png' alt = 'Dixie/'s profile'
+        
     },{
         name: 'Mowgli',
         imgSrc: '../images/mowgli-cat.png',
@@ -162,7 +162,7 @@ let petProfiles = [
         age: 156, //weeks old
         kidFriendly: 'No',
         petFriendly: 'No',
-        // Img: Url 'images/mowgli-cat.png' alt = 'Mowgli/'s profile'
+        
     }, {
         name: 'Sienna',
         imgSrc: '../images/sienna-cat.png',
@@ -172,7 +172,7 @@ let petProfiles = [
         age: 78, //weeks old
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
-        // Img: Url 'images/sienna-cat.png' alt = 'Sienna/'s profile'
+        
     },{
         name: 'Simba',
         imgSrc: '../images/simba-cat.png',
@@ -182,7 +182,7 @@ let petProfiles = [
         age: 52,
         kidFriendly: 'Yes',
         petFriendly: 'No',
-        // Img: Url 'images/simba-cat.png' alt = 'Simbas profile';
+        
     },{
         name: 'Trixie',
         imgSrc: '../images/trixie-cat.png',
@@ -192,7 +192,7 @@ let petProfiles = [
         age: 520,
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
-        // Img 'images/trixie-cat.png' alt = 'Trixie/'s profile'
+        
     },{
         name: 'Plano',
         imgSrc: '../images/plano-cat.png',
@@ -202,7 +202,7 @@ let petProfiles = [
         age: 52,
         kidFriendly: 'No',
         petFriendly: 'Yes',
-        // Img: Url 'images/plano-cat.png' alt = 'Planos profile'
+        
     },{
         name: 'Pepper Jack',
         imgSrc: '../images/pepper-jack-cat.png',
@@ -212,7 +212,7 @@ let petProfiles = [
         age: 28,
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
-        // Img: Url 'images/pepper-jack-cat.png' alt = 'Pepper Jacks profile'
+        
     },{
         name: 'Mildred',
         imgSrc: '../images/mildred-cat.png',
@@ -222,9 +222,82 @@ let petProfiles = [
         age: 520,
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
-        // Img: Url 'images/mildred-cat.png' alt = 'Mildred/'s profile'
+        
     }
 ];
+
+
+
+
+
+
+
+Pet.prototype.render = function(){
+let parentElement = document.getElementById('our-pets');
+
+let div = document.createElement('div');
+parentElement.appendChild(div);
+
+let h2 = document.createElement('h2');
+h2.textContent = this.petName;
+div.appendChild(h2);
+
+let petPara = document.createElement('p');
+petPara.textContent = 'Pet\'s age is' + this.age;
+div.appendChild(petPara);
+
+let petUl = document.createElement('ul');
+div.appendChild(petUl);
+
+let breedLi = document.createElement('li');
+breedLi.textContent = this.breed;
+petUl.appendChild(breedLi);
+
+let typeLi = document.createElement('li');
+typeLi.textContent = this.type;
+petUl.appendChild(typeLi);
+
+}
+
+let petImg = document.createElement('img');
+petImg.setAttribute('src', 'images/' + this.imgSrc + '.png');
+petImg.setAttribute('alt', 'Adopt a pet today!');
+div.appendChild(petImg);
+
+
+
+
+
+
+
+
+
+
+
+
+} ///ends here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for(let i = o; i < petArray.length; i++) {
+//     petArray[i].render();
+// }
 
 // if petProfiles[age] > 8 && < 52 {
 //     let months = petProfiles[age]/4
