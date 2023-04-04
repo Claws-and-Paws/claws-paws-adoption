@@ -6,24 +6,23 @@ console.log('dawgs baby!');
 let petArray = [];
 
 
-function Pet(petName, imgSrc, type, breed, age, gender, kidFriendly, petFriendly) {
+function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
     console.log("🚀 ~ file: app.js:10 ~ Pet ~ Pet:", Pet)
-    this.petName = petName
-    this.type = type
-    this.breed = breed
-    this.age = age
-    this.gender = gender
-    this.kidFriendly = kidFriendly
-    this.petFriendly = petFriendly
-    this.imgSrc = imgSrc
+    this.name = name;
+    this.type = type;
+    this.breed = breed;
+    this.age = age;
+    this.gender = gender;
+    this.kidFriendly = kidFriendly;
+    this.petFriendly = petFriendly;
+    this.imgSrc = imgSrc;
     petArray.push(this);
 
 }
 
 
 
-let petProfiles = [
-    console.log('petssss');
+let petProfiles =  [
     {
         name: 'Duke',
         imgSrc: '../images/duke-dog.png',
@@ -109,7 +108,7 @@ let petProfiles = [
         type: 'Dog',
         gender: 'Female',
         breed: 'Goldendoodle & Irish Setter Mix',
-        age: '5 months old',
+        age: 20, // weeks old
         kidFriendly: 'Yes',
         petFriendly: 'Good with other dogs',
 
@@ -121,7 +120,7 @@ let petProfiles = [
         breed: 'Jack Russell Terrier Mix',
         age: 156, //weeks old
         kidFriendly: 'Yes',
-        petFriendly: 'Good with other dogs, cats',
+        petFriendly: 'Yes',
 
     }, {
         name: 'Andi',
@@ -223,51 +222,53 @@ let petProfiles = [
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
 
-    }
-];
-console.log("🚀 ~ file: app.js:227 ~ petProfiles:", petProfiles)
-console.log("🚀 ~ file: app.js:227 ~ petProfiles:", petProfiles)
-console.log("🚀 ~ file: app.js:227 ~ petProfiles:", petProfiles)
+    } ]
+console.log("🚀 ~ file: app.js:227 ~ petProfiles:", petProfiles);
 
 
 
+for(let i = 0; i < petProfiles.length; i++){
+
+    petArray.push(new Pet(petProfiles[i].name, imgSrc, gender, breed, type));
+}
 
 
 
+console.log("🚀 ~ file: app.js:7 ~ petArray:", petArray)
 
 function renderPetProfiles() {
 console.log("🚀 ~ file: app.js:235 ~ renderPetProfiles ~ renderPetProfiles:", renderPetProfiles);
 
-    for (let i = o; i < petArray.length; i++) {
-        petArray[i].render();
-    }
-    let parentElement = document.getElementById('our-pets');
+    // for (let i = o; i < petArray.length; i++) {
+    //     petArray[i].render(),
+    // }
+    // let parentElement = document.getElementById('our-pets'),
 
-    let div = document.createElement('div');
-    parentElement.appendChild(div);
+    // let div = document.createElement('div'),
+    // parentElement.appendChild(div),
 
-    let h2 = document.createElement('h2');
-    h2.textContent = this.petName;
-    div.appendChild(h2);
+    // let h2 = document.createElement('h2'),
+    // h2.textContent = this.petName,
+    // div.appendChild(h2),
 
-    let petPara = document.createElement('p');
-    petPara.textContent = 'Pet\'s age is' + this.age;
-    div.appendChild(petPara);
+    // let petPara = document.createElement('p'),
+    // petPara.textContent = 'Pet\'s age is' + this.age,
+    // div.appendChild(petPara),
 
-    let petUl = document.createElement('ul');
-    div.appendChild(petUl);
+    // let petUl = document.createElement('ul'),
+    // div.appendChild(petUl),
 
-    let breedLi = document.createElement('li');
-    breedLi.textContent = this.breed;
-    petUl.appendChild(breedLi);
+    // let breedLi = document.createElement('li'),
+    // breedLi.textContent = this.breed,
+    // petUl.appendChild(breedLi),
 
-    let typeLi = document.createElement('li');
-    typeLi.textContent = this.type;
-    petUl.appendChild(typeLi);
+    // let typeLi = document.createElement('li'),
+    // typeLi.textContent = this.type,
+    // petUl.appendChild(typeLi),
 
 }
 
-let petImg = document.createElement('img');
+let petImg = document.createElement('img'),
 petImg.setAttribute('src', 'images/' + this.imgSrc + '.png');
 petImg.setAttribute('alt', 'Adopt a pet today!');
 div.appendChild(petImg);
@@ -299,10 +300,10 @@ div.appendChild(petImg);
 
 // if petProfiles[age] > 8 && < 52 {
 //     let months = petProfiles[age]/4
-//     console.log('your pet is ${months} old');
+//     console.log('your pet is ${months} old'),
 // } else if petProfiles[age] > 52 {
-// let years = petProfiles[age]/52;
-// console.log('Your pet is ${years} old');
+// let years = petProfiles[age]/52,
+// console.log('Your pet is ${years} old'),
 // }
 
 
