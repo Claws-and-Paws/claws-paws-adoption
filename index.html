@@ -24,8 +24,36 @@
         <main class="main">
             <section class="user-form">
                 <h2 class="user-form__title">Enter Your Info to get Matches</h2>
-                <form class="form">
-
+                <form class="form" id="form">
+                    <fieldset class="form__fieldset">
+                        <label class="form__label" for="name">Full Name</label>
+                        <input class="form__input" id="name" type="text" placeholder="Enter your full name">
+                        <label class="form__label" for="pet-type">Pet Type</label>
+                        <select class="form__select" name="pet-type" id="pet-type">
+                            <option value="" disabled selected>Cat or Dog?</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                        </select>
+                        <label class="form__label" for="pet-age">Pet Age</label>
+                        <select class="form__select" name="pet-age" id="pet-age">
+                            <option value="" disabled selected>Pet's Age</option>
+                            <option value="eight-weeks-to-one-year">8wks to 1 year</option>
+                            <option value="one-year-to-three-years">1 year to 3 years</option>
+                            <option value="three-years-to-five-years">3 years to 5 years</option>
+                            <option value="six-years-plus">6 years +</option>
+                        </select>
+                        <label class="form__label" for="kid-pet-friendly">Kid and Pet Friendly</label>
+                        <select class="form__select" name="kid-pet-friendly" id="kid-pet-friendly">
+                            <option value="" disabled selected>kid and pet friendly?</option>
+                            <option value="kid-friendly">Kid Friendly</option>
+                            <option value="pet-friendly">Pet Friendly</option>
+                            <option value="kid-and-pet-friendly">Kid and Pet Friendly</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                        <button type="submit" class="form__button">Submit</button>
+                        <a class="form__link" href="results.html">Results</a>
+                    </fieldset>
                 </form>
 
             </section>
