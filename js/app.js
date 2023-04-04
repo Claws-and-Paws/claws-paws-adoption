@@ -4,25 +4,6 @@ console.log('dawgs baby!');
 
 
 let petArray = [];
-
-
-function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
-    console.log("🚀 ~ file: app.js:10 ~ Pet ~ Pet:", Pet)
-    this.name = name;
-    this.imgSrc = imgSrc;
-    this.type = type;
-    this.gender = gender;
-    this.breed = breed;
-    this.age = age;
-    this.kidFriendly = kidFriendly;
-    this.petFriendly = petFriendly;
-
-    petArray.push(this);
-
-}
-
-
-
 let petProfiles = [
     {
         name: 'Duke',
@@ -127,7 +108,7 @@ let petProfiles = [
         name: 'Andi',
         imgSrc: '../images/andi-cat.png',
         type: 'Cat',
-               gender: 'Female',
+        gender: 'Female',
         breed: 'Domestic Short Hair',
         age: 416, //weeks old
         kidFriendly: 'Yes',
@@ -224,32 +205,45 @@ let petProfiles = [
         petFriendly: 'Yes',
 
     }
-]
-console.log("🚀 ~ file: app.js:227 ~ petProfiles:", petProfiles);
+];
 
 
-function newPetObjects() {
-    for (let i = 0; i < petProfiles.length; i++) {
 
-        petArray.push(new Pet(petProfiles[i].name, petProfiles[i].imgSrc, petProfiles[i].type, petProfiles[i].breed, petProfiles[i].gender, petProfiles[i].age));
-    }
+function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
+    this.name = name;
+    this.imgSrc = imgSrc;
+    this.type = type;
+    this.gender = gender;
+    this.breed = breed;
+    this.age = age;
+    this.kidFriendly = kidFriendly;
+    this.petFriendly = petFriendly;
+
+    petArray.push(this);
+
 }
 
 
 
 
-console.log("🚀 ~ file: app.js:7 ~ petArray:", petArray)
+
+function newPetObjects() {
+    for (let i = 0; i < petProfiles.length; i++) {
+    new Pet(petProfiles[i].name, petProfiles[i].imgSrc, petProfiles[i].type, petProfiles[i].breed, petProfiles[i].gender, petProfiles[i].age);
+    }
+ 
+}
+
+
+
+
 
 function renderPetProfiles() {
-    console.log("🚀 ~ file: app.js:235 ~ renderPetProfiles ~ renderPetProfiles:", renderPetProfiles);
-
-    for (let i = o; i < petArray.length; i++) {
-        petArray[i].render();
-
-
-
-
-    }
+    newPetObjects();
+console.log(petArray)
+    // for (let i = o; i < petArray.length; i++) {
+    //     petArray[i].render();
+    // }
 
 }
 
@@ -300,9 +294,7 @@ Pet.prototype.render = function () {
 
 
 
-
-
-
+renderPetProfiles();
 
 
 
