@@ -7,7 +7,7 @@ let petArray = [];
 let petProfiles = [
     {
         name: 'Duke',
-        imgSrc: '../images/duke-dog.png',
+        imgSrc: '../images/duke-dog',
         type: 'Dog',
         gender: 'Male',
         breed: 'Australian Cattle Dog/Blue Heeler & Harrier Mix',
@@ -16,7 +16,7 @@ let petProfiles = [
         petFriendly: 'Good with other dogs, cats',
     }, {
         name: 'Nikki',
-        imgSrc: '../images/nikki-dog.png',
+        imgSrc: '../images/nikki-dog',
         type: 'Dog',
         gender: 'Female',
         breed: 'Rottweiler/German mix',
@@ -26,7 +26,7 @@ let petProfiles = [
 
     }, {
         name: 'Storm',
-        imgSrc: '../images/storm-dog.png',
+        imgSrc: '../images/storm-dog',
         type: 'Dog',
         gender: 'Female',
         breed: 'Mountain Cur',
@@ -36,7 +36,7 @@ let petProfiles = [
 
     }, {
         name: 'Mabel',
-        imgSrc: '../images/mabel-dog.png',
+        imgSrc: '../images/mabel-dog',
         type: 'Dog',
         gender: 'Female',
         breed: 'Terrier',
@@ -46,7 +46,7 @@ let petProfiles = [
 
     }, {
         name: 'Knox',
-        imgSrc: '../images/knox-dog.png',
+        imgSrc: '../images/knox-dog',
         type: 'Dog',
         gender: 'Male',
         breed: 'Chocolate Labrador Retriever',
@@ -56,7 +56,7 @@ let petProfiles = [
 
     }, {
         name: 'Bleu',
-        imgSrc: '../images/bleu-dog.png',
+        imgSrc: '../images/bleu-dog',
         type: 'Dog',
         gender: 'Male',
         breed: 'Siberian Husky',
@@ -66,7 +66,7 @@ let petProfiles = [
 
     }, {
         name: 'Talor',
-        imgSrc: '../images/talor-dog.png',
+        imgSrc: '../images/talor-dog',
         type: 'Dog',
         gender: 'Male',
         breed: 'French Bulldog',
@@ -76,7 +76,7 @@ let petProfiles = [
 
     }, {
         name: 'Kingston',
-        imgSrc: '../images/kingston-dog.png',
+        imgSrc: '../images/kingston-dog',
         type: 'Dog',
         gender: 'Male',
         breed: 'Pomeranian mix',
@@ -86,7 +86,7 @@ let petProfiles = [
 
     }, {
         name: 'Amy',
-        imgSrc: '../images/amy-dog.png',
+        imgSrc: '../images/amy-dog',
         type: 'Dog',
         gender: 'Female',
         breed: 'Goldendoodle & Irish Setter Mix',
@@ -96,7 +96,7 @@ let petProfiles = [
 
     }, {
         name: 'Gizmo',
-        imgSrc: '../images/gizmo-dog.png',
+        imgSrc: '../images/gizmo-dog',
         type: 'Dog',
         gender: 'Male',
         breed: 'Jack Russell Terrier Mix',
@@ -106,7 +106,7 @@ let petProfiles = [
 
     }, {
         name: 'Andi',
-        imgSrc: '../images/andi-cat.png',
+        imgSrc: '../images/andi-cat',
         type: 'Cat',
         gender: 'Female',
         breed: 'Domestic Short Hair',
@@ -116,7 +116,7 @@ let petProfiles = [
 
     }, {
         name: 'Cade',
-        imgSrc: '../images/cade-cat.png',
+        imgSrc: '../images/cade-cat',
         type: 'Cat',
         gender: 'Male',
         breed: 'Domestic Short Hair',
@@ -126,7 +126,7 @@ let petProfiles = [
 
     }, {
         name: 'Dixie',
-        imgSrc: '../images/dixie-cat.png',
+        imgSrc: '../images/dixie-cat',
         type: 'Cat',
         gender: 'Female',
         breed: 'Domestic Long Hair',
@@ -136,7 +136,7 @@ let petProfiles = [
 
     }, {
         name: 'Mowgli',
-        imgSrc: '../images/mowgli-cat.png',
+        imgSrc: '../images/mowgli-cat',
         type: 'Cat',
         gender: 'Male',
         breed: 'Domestic Short Hair',
@@ -146,7 +146,7 @@ let petProfiles = [
 
     }, {
         name: 'Sienna',
-        imgSrc: '../images/sienna-cat.png',
+        imgSrc: '../images/sienna-cat',
         type: 'Cat',
         gender: 'Female',
         breed: 'Domestic Short Hair',
@@ -156,7 +156,7 @@ let petProfiles = [
 
     }, {
         name: 'Simba',
-        imgSrc: '../images/simba-cat.png',
+        imgSrc: '../images/simba-cat',
         type: 'Cat',
         gender: 'Male',
         breed: 'Domestic Short Hair',
@@ -166,7 +166,7 @@ let petProfiles = [
 
     }, {
         name: 'Trixie',
-        imgSrc: '../images/trixie-cat.png',
+        imgSrc: '../images/trixie-cat',
         type: 'Cat',
         gender: 'Female',
         breed: 'Domestic Long Hair',
@@ -176,7 +176,7 @@ let petProfiles = [
 
     }, {
         name: 'Plano',
-        imgSrc: '../images/plano-cat.png',
+        imgSrc: '../images/plano-cat',
         type: 'Cat',
         gender: 'Male',
         breed: 'Domestic Short Hair',
@@ -186,7 +186,7 @@ let petProfiles = [
 
     }, {
         name: 'Pepper Jack',
-        imgSrc: '../images/pepper-jack-cat.png',
+        imgSrc: '../images/pepperjack-cat',
         type: 'Cat',
         gender: 'Female',
         breed: 'Domestic Long Hair',
@@ -196,7 +196,7 @@ let petProfiles = [
 
     }, {
         name: 'Mildred',
-        imgSrc: '../images/mildred-cat.png',
+        imgSrc: '../images/mildred-cat',
         type: 'Cat',
         gender: 'Female',
         breed: 'Domestic Short Hair',
@@ -241,9 +241,9 @@ function newPetObjects() {
 function renderPetProfiles() {
     newPetObjects();
 console.log(petArray)
-    // for (let i = o; i < petArray.length; i++) {
-    //     petArray[i].render();
-    // }
+    for (let i = 0; i < petArray.length; i++) {
+        petArray[i].render();
+    }
 
 }
 
