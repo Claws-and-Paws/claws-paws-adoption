@@ -49,10 +49,25 @@ img {
     z-index: 90;
 }
 
-.profiles-group:hover p {
+.profiles-group:hover .name {
     display: block;
 }
 
 .Bio-appear {
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(53, 49, 49);
+    border-radius: 5px;
+    width: 95px;
+    padding: 7px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
 
+.Bio-appear:active{
+    display: block;
+    margin-top: 10px;
 }
