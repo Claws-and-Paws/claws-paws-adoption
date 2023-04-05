@@ -18,7 +18,7 @@
     cursor: pointer;
 }
 
-img {
+.images {
     width: 15rem;
     height: 15rem;
     object-fit: cover;
@@ -71,9 +71,8 @@ img {
 font-size: 25px;
 }
 
-/* .biographies:hidden {
+.biographies:hidden {
     display: flex;
     flex-direction: column;
-    border: 2px blue;
-} */
+}
 
