@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 80px;
 } 
 
 .profiles-group {
@@ -19,8 +19,8 @@
 }
 
 img {
-    /* width: 15rem;
-    height: 15rem; */
+    width: 15rem;
+    height: 15rem;
     object-fit: cover;
     object-position: top;
     border-radius: 50%;
@@ -28,9 +28,11 @@ img {
     position: relative;
     top: 0;
     transition: 250ms top ease-in-out;
+    margin-bottom: 50px;
 }
 
 .name {
+    margin-top: -30px;
     position: absolute;
     font-size: 25px;
     color: white;
@@ -45,7 +47,7 @@ img {
 }
 
 .profiles-group:hover {
-    top: -2.5rem;
+    top: -1rem;
     z-index: 90;
 }
 
@@ -53,21 +55,25 @@ img {
     display: block;
 }
 
-.Bio-appear {
-    position: absolute;
-    font-size: 25px;
+.biographies {
+    width: 400px;
+    height: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(77, 67, 63);
     color: white;
-    background-color: rgb(53, 49, 49);
-    border-radius: 5px;
-    width: 95px;
-    padding: 7px;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
+    overflow: scroll;
+    margin: 0 auto;
+    margin-top: 35px;
 }
 
-.Bio-appear:active{
-    display: block;
-    margin-top: 10px;
+.biographies h2 {
+font-size: 25px;
 }
+
+/* .biographies:hidden {
+    display: flex;
+    flex-direction: column;
+    border: 2px blue;
+} */
+
