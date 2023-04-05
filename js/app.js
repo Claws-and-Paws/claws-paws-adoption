@@ -318,10 +318,11 @@ function renderPetProfiles() {
 
 
 function renderResults() {
-    let section = document.getElementById('results');
+    console.log("🚀 ~ file: app.js:321 ~ renderResults ~ renderResults:", renderResults);
+    let section = document.getElementById('results__container');
     for(let i = 0; i < Pet.petArray.length; i++); {
         let p = document.createElement('p');
-        p.textContent = renderPetCard();
+        p.textContent = `${this.name} ${this.imgSrc} ${this.type} ${this.gender} ${this.breed} ${this.formattedAge} ${this.kidFriendly} ${this.petFriendly}`; 
     }
 
 }
@@ -345,27 +346,27 @@ function renderResults() {
 
 
 
-// let savePetInfo = localStorage.getItem('saveProduct');
-// console.log('local storage', savePetInfo);
+let savePetInfo = localStorage.getItem('saveProduct');
+console.log('local storage', savePetInfo);
 
-// if (savePetInfo) {
-//     let arrayOfNotPets = JSON.parse(savePetInfo);
-//     for (let j = 0; j < arrayOfNotPets, length; j++) {
-//         new newPetObjects(
-//             this.name = arrayOfNotPets[j].name,
-//             this.type = arrayOfNotPets[j].type,
-//             this.gender = arrayOfNotPets[j].gender,
-//             this.breed = arrayOfNotPets[j].breed,
-//             this.kidFriendly = arrayOfNotPets[j].kidFriendly,
-//             this.petFriendly = arrayOfNotPets[j].petFriendly
-//         );
-//     }
-// } else {
-
-
+if (savePetInfo) {
+    let arrayOfNotPets = JSON.parse(savePetInfo);
+    for (let j = 0; j < arrayOfNotPets, length; j++) {
+        new newPetObjects(
+            this.name = arrayOfNotPets[j].name,
+            this.type = arrayOfNotPets[j].type,
+            this.gender = arrayOfNotPets[j].gender,
+            this.breed = arrayOfNotPets[j].breed,
+            this.kidFriendly = arrayOfNotPets[j].kidFriendly,
+            this.petFriendly = arrayOfNotPets[j].petFriendly
+        );
+    }
+} else {
 
 
-// }
+
+
+}
 
 
 
