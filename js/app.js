@@ -309,12 +309,15 @@ function handleNewSubmit(event) {
     let type = document.getElementById('pet-type').value; 
     console.log(type);
 
-    // let type = event.target.type.value;
+    let age = document.getElementById('pet-age').value;
+    console.log(age);
 
-    // let gender = event.target.gender.value;
+    let breed = document.getElementById('breed').value;
+    console.log(breed)
 
-    // let breed = event.target.breed.value;
+    let kidFriendly = document.getElementById('kid-pet-friendly').value;
 
+    let petFriendly = document.getElementById('kid-pet-friendly').value;
 
 
     
