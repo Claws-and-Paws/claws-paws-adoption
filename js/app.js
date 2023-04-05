@@ -3,6 +3,7 @@ console.log('dawgs baby!');
 
 
 let form = document.getElementById('form');
+let allRequests = [];
 let petArray = [];
 let petProfiles = [
     {
@@ -271,7 +272,17 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
     };
 }
 
-
+//adding second constructor for taking new pet requests from customer
+function PetRequest(name, type, age, breed, friendly){
+    this.name = name;
+    this.type = type;
+    this.age = age;
+    this.breed = breed;
+    this.friendly = friendly;
+    
+    allRequests.push(this);
+}
+console.log('did we get a new request', allRequests);
 
 function newPetObjects() {
     for (let i = 0; i < petProfiles.length; i++) {
@@ -315,12 +326,13 @@ function handleNewSubmit(event) {
     let breed = document.getElementById('breed').value;
     console.log(breed)
 
-    let kidFriendly = document.getElementById('kid-pet-friendly').value;
+    let friendly = document.getElementById('kid-pet-friendly').value;
 
-    let petFriendly = document.getElementById('kid-pet-friendly').value;
+    // let petFriendly = document.getElementById('kid-pet-friendly').value;
+    console.log(name, type, age, breed, friendly);
 
-
-    
+    let newPetRequest = new PetRequest(name, type, age, breed, friendly);
+    console.log('newnewnew pet request', newPetRequest);
 };
 
 
