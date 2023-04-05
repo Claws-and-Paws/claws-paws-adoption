@@ -1,5 +1,12 @@
 .about-us {
     height: 600px;
-        text-align: center;
-        border: 1px solid red;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.profile-img {
+    width: 960px;
+    margin: 30px auto;
+    display:flex;
+    justify-content: space-between;
 }
