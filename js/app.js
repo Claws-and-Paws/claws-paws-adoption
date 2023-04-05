@@ -300,19 +300,21 @@ function renderPetProfiles() {
 
 
 
-// function handleNewSubmit(event) {
-//     event.preventDefault();
-//     console.log('Works');
-//     event.stopPropagation();
+function handleNewSubmit(event) {
+    event.preventDefault();
+    console.log('Works');
+    event.stopPropagation();
 
-//     let type = event.target.type.value;
+    let type = event.target.type.value;
 
-//     let gender = event.target.gender.value;
+    let gender = event.target.gender.value;
 
-//     let breed = event.target.breed.value;
+    let breed = event.target.breed.value;
 
     
-// };
+
+    
+};
 
 
 
@@ -326,23 +328,6 @@ function renderResults() {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
