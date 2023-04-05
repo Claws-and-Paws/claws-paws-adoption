@@ -284,6 +284,10 @@ function PetRequest(name, type, age, breed, friendly){
 }
 console.log('did we get a new request', allRequests);
 
+
+
+
+
 function newPetObjects() {
     for (let i = 0; i < petProfiles.length; i++) {
         let pet = petProfiles[i];
@@ -333,42 +337,45 @@ function handleNewSubmit(event) {
 
     let newPetRequest = new PetRequest(name, type, age, breed, friendly);
     console.log('newnewnew pet request', newPetRequest);
+
+    form.reset();
 };
 
 
 
 
-function renderResults() {
+// function renderResults() {
 
-    let section = document.getElementById('results__container');
-    for(let i = 0; i < Pet.petArray.length; i++); {
-        let p = document.createElement('p');
-        p.textContent = `${this.name} ${this.imgSrc} ${this.type} ${this.gender} ${this.breed} ${this.formattedAge} ${this.kidFriendly} ${this.petFriendly}`; 
+//     let section = document.getElementById('results__container');
+//     for(let i = 0; i < Pet.petArray.length; i++); {
+//         let p = document.createElement('p');
+//         p.textContent = `${this.name} ${this.imgSrc} ${this.type} ${this.gender} ${this.breed} ${this.formattedAge} ${this.kidFriendly} ${this.petFriendly}`; 
         
-        console.log("🚀 ~ file: app.js:329 ~ renderResults ~    p.textContent :",    p.textContent )
-    }
+//         console.log("🚀 ~ file: app.js:329 ~ renderResults ~    p.textContent :",    p.textContent )
+//     }
 
-}
+// }
 
 
 
-let savePetInfo = localStorage.getItem('saveProduct');
-console.log('local storage', savePetInfo);
+let savedPetInfo = localStorage.getItem('saveProduct');
+console.log('local storage', savedPetInfo);
 
-if (savePetInfo) {
-    let arrayOfNotPets = JSON.parse(savePetInfo);
-    for (let j = 0; j < arrayOfNotPets, length; j++) {
-        new newPetObjects(
+if (savedPetInfo) {
+    let arrayOfNotPets = JSON.parse(savedPetInfo);
+    for (let j = 0; j < arrayOfNotPets, length; j++); {
+        new Product(
             this.name = arrayOfNotPets[j].name,
             this.type = arrayOfNotPets[j].type,
             this.gender = arrayOfNotPets[j].gender,
             this.breed = arrayOfNotPets[j].breed,
-            this.kidFriendly = arrayOfNotPets[j].kidFriendly,
-            this.petFriendly = arrayOfNotPets[j].petFriendly
-        );
-    }
-} else {
+            this.friendly = arrayOfNotPets[j].friendly
+        )
+            
+    };
 
+} else {
+    petProfiles = [];
 
 
 
