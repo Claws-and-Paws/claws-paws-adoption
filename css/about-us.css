@@ -30,7 +30,7 @@ img {
     transition: 250ms top ease-in-out;
 }
 
-p {
+.name {
     position: absolute;
     font-size: 25px;
     color: white;
@@ -51,4 +51,8 @@ p {
 
 .profiles-group:hover p {
     display: block;
+}
+
+.Bio-appear {
+
 }
