@@ -1,5 +1,12 @@
 .results {
     height: 600px;
-        text-align: center;
-        border: 1px solid red;
+    text-align: center;
+}
+
+
+.results-header {
+    background-image: url(../images/results-banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
 }
