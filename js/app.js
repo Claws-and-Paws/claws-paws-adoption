@@ -270,6 +270,9 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
 
         ourPets.appendChild(petCard);
     };
+    //add pets to local storage maybe not yet
+    // let petsLocalStorage = JSON.stringify(petArray);
+    // localStorage.setItem('petObjects',   petsLocalStorage);
 }
 
 //adding second constructor for taking new pet requests from customer
@@ -281,8 +284,10 @@ function PetRequest(name, type, age, breed, friendly){
     this.friendly = friendly;
     
     allRequests.push(this);
+    let allRequestsLocalStorage = JSON.stringify(allRequests);
+    localStorage.setItem('petRequest',  allRequestsLocalStorage);
 }
-console.log('did we get a new request', allRequests);
+// console.log('did we get a new request', allRequests);
 
 
 
@@ -322,22 +327,21 @@ function handleNewSubmit(event) {
 
     let name = event.target.name.value;
     let type = document.getElementById('pet-type').value; 
-    console.log(type);
+    // console.log(type);
 
     let age = document.getElementById('pet-age').value;
-    console.log(age);
+    // console.log(age);
 
     let breed = document.getElementById('breed').value;
-    console.log(breed)
+    // console.log(breed)
 
     let friendly = document.getElementById('kid-pet-friendly').value;
 
     // let petFriendly = document.getElementById('kid-pet-friendly').value;
-    console.log(name, type, age, breed, friendly);
+    // console.log(name, type, age, breed, friendly);
 
     let newPetRequest = new PetRequest(name, type, age, breed, friendly);
-    console.log('newnewnew pet request', newPetRequest);
-
+    // console.log('newnewnew pet request', typeof newPetRequest);
     form.reset();
 };
 
@@ -358,28 +362,28 @@ function handleNewSubmit(event) {
 
 
 
-let savedPetInfo = localStorage.getItem('saveProduct');
-console.log('local storage', savedPetInfo);
+let savedPetInfo = localStorage.getItem('petRequest');
+console.log('local storage', JSON.parse(savedPetInfo));
 
-if (savedPetInfo) {
-    let arrayOfNotPets = JSON.parse(savedPetInfo);
-    for (let j = 0; j < arrayOfNotPets, length; j++); {
-        new Product(
-            this.name = arrayOfNotPets[j].name,
-            this.type = arrayOfNotPets[j].type,
-            this.gender = arrayOfNotPets[j].gender,
-            this.breed = arrayOfNotPets[j].breed,
-            this.friendly = arrayOfNotPets[j].friendly
-        )
+// if (savedPetInfo) {
+//     let arrayOfNotPets = JSON.parse(savedPetInfo);
+//     for (let j = 0; j < arrayOfNotPets, length; j++); {
+//         new Product(
+//             this.name = arrayOfNotPets[j].name,
+//             this.type = arrayOfNotPets[j].type,
+//             this.gender = arrayOfNotPets[j].gender,
+//             this.breed = arrayOfNotPets[j].breed,
+//             this.friendly = arrayOfNotPets[j].friendly
+//         )
             
-    };
+//     };
 
-} else {
-    petProfiles = [];
+// } else {
+//     petProfiles = [];
 
 
 
-}
+// }
 
 
 
