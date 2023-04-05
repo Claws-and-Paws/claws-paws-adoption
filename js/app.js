@@ -271,6 +271,8 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
     };
 }
 
+
+
 function newPetObjects() {
     for (let i = 0; i < petProfiles.length; i++) {
         let pet = petProfiles[i];
@@ -288,6 +290,7 @@ function newPetObjects() {
 
 }
 
+
 function renderPetProfiles() {
     newPetObjects();
     for (let i = 0; i < petArray.length; i++) {
@@ -297,23 +300,75 @@ function renderPetProfiles() {
 
 
 
+// function handleNewSubmit(event) {
+//     event.preventDefault();
+//     console.log('Works');
+//     event.stopPropagation();
 
-let savePetInfo = localStorage.getItem('saveProduct');
-console.log('local storage', savePetInfo);
+//     let type = event.target.type.value;
 
-if (savePetInfo) {
-    let arrayOfNotPets = JSON.parse(savePetInfo);
-    for (let j = 0; j < arrayOfNotPets, length; j++) {
-        new newPetObjects(
-            this.name = arrayOfNotPets[j].name,
-            this.type = arrayOfNotPets[j].type,
-            this.gender = arrayOfNotPets[j].gender,
-            this.breed = arrayOfNotPets[j].breed,
-            this.kidFriendly = arrayOfNotPets[j].kidFriendly,
-            this.petFriendly = arrayOfNotPets[j].petFriendly
-        );
+//     let gender = event.target.gender.value;
+
+//     let breed = event.target.breed.value;
+
+    
+// };
+
+
+
+
+function renderResults() {
+    let section = document.getElementById('results');
+    for(let i = 0; i < Pet.petArray.length; i++); {
+        let p = document.createElement('p');
+        p.textContent = renderPetCard();
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let savePetInfo = localStorage.getItem('saveProduct');
+// console.log('local storage', savePetInfo);
+
+// if (savePetInfo) {
+//     let arrayOfNotPets = JSON.parse(savePetInfo);
+//     for (let j = 0; j < arrayOfNotPets, length; j++) {
+//         new newPetObjects(
+//             this.name = arrayOfNotPets[j].name,
+//             this.type = arrayOfNotPets[j].type,
+//             this.gender = arrayOfNotPets[j].gender,
+//             this.breed = arrayOfNotPets[j].breed,
+//             this.kidFriendly = arrayOfNotPets[j].kidFriendly,
+//             this.petFriendly = arrayOfNotPets[j].petFriendly
+//         );
+//     }
+// } else {
+
+
+
+
+// }
+
+
+
 
 
 
