@@ -44,7 +44,7 @@ img {
     display: none;
 }
 
-.profiles-group:hover img {
+.profiles-group:hover {
     top: -2.5rem;
     z-index: 90;
 }
