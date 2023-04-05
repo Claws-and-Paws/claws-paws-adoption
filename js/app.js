@@ -2,7 +2,7 @@
 console.log('dawgs baby!');
 
 
-
+let form = document.getElementById('form');
 let petArray = [];
 let petProfiles = [
     {
@@ -302,16 +302,20 @@ function renderPetProfiles() {
 
 function handleNewSubmit(event) {
     event.preventDefault();
-    console.log('Works');
+    console.log(event.target.name.value);
     event.stopPropagation();
 
-    let type = event.target.type.value;
+    let name = event.target.name.value;
+    let type = document.getElementById('pet-type').value; 
+    console.log(type);
 
-    let gender = event.target.gender.value;
+    // let type = event.target.type.value;
 
-    let breed = event.target.breed.value;
+    // let gender = event.target.gender.value;
 
-    
+    // let breed = event.target.breed.value;
+
+
 
     
 };
@@ -320,11 +324,13 @@ function handleNewSubmit(event) {
 
 
 function renderResults() {
-    console.log("🚀 ~ file: app.js:321 ~ renderResults ~ renderResults:", renderResults);
+
     let section = document.getElementById('results__container');
     for(let i = 0; i < Pet.petArray.length; i++); {
         let p = document.createElement('p');
         p.textContent = `${this.name} ${this.imgSrc} ${this.type} ${this.gender} ${this.breed} ${this.formattedAge} ${this.kidFriendly} ${this.petFriendly}`; 
+        
+        console.log("🚀 ~ file: app.js:329 ~ renderResults ~    p.textContent :",    p.textContent )
     }
 
 }
@@ -363,5 +369,5 @@ if (savePetInfo) {
 
 
 
-
+form.addEventListener('submit', handleNewSubmit);
 renderPetProfiles();
