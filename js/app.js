@@ -194,6 +194,16 @@ let petProfiles = [
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
 
+    },
+    {
+        name: 'Simba',
+        imgSrc: '../images/simba-cat.png',
+        type: 'Cat',
+        gender: 'Male',
+        breed: 'Domestic Short Hair',
+        age: 52,
+        kidFriendly: 'Yes',
+        petFriendly: 'Yes',
     }
 ];
 
@@ -218,7 +228,7 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
 
 
     petArray.push(this);
-    
+
     this.renderPetCard = function () {
         let ourPets = document.querySelector(".our-pets__container");
 
