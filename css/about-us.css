@@ -1,12 +1,54 @@
 .about-us {
-    height: 600px;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
     text-align: center;
     border: 1px solid red;
 }
 
-.profile-img {
-    width: 960px;
-    margin: 30px auto;
-    display:flex;
-    justify-content: space-between;
+.profiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+} 
+
+.profiles-group {
+    position: relative;
+    margin-left: -1rem;
+    cursor: pointer;
+}
+
+img {
+    /* width: 15rem;
+    height: 15rem; */
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 4px solid grey;
+    position: relative;
+    top: 0;
+    transition: 250ms top ease-in-out;
+}
+
+p {
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(53, 49, 49);
+    border-radius: 5px;
+    width: 95px;
+    padding: 7px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.profiles-group:hover img {
+    top: -2.5rem;
+    z-index: 90;
+}
+
+.profiles-group:hover p {
+    display: block;
 }
