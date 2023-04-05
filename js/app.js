@@ -154,7 +154,7 @@ let petProfiles = [
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
 
-    },  {
+    }, {
         name: 'Trixie',
         imgSrc: '../images/trixie-cat.png',
         type: 'Cat',
@@ -218,6 +218,7 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
 
 
     petArray.push(this);
+    
     this.renderPetCard = function () {
         let ourPets = document.querySelector(".our-pets__container");
 
@@ -274,6 +275,7 @@ function newPetObjects() {
             pet.petFriendly
         );
     }
+
 }
 
 function renderPetProfiles() {
@@ -282,5 +284,33 @@ function renderPetProfiles() {
         petArray[i].renderPetCard();
     }
 }
+
+
+
+
+let savePetInfo = localStorage.getItem('saveProduct');
+console.log('local storage', savePetInfo);
+
+if (savePetInfo) {
+    let arrayOfNotPets = JSON.parse(savePetInfo);
+    for (let j = 0; j < arrayOfNotPets, length; j++) {
+        new newPetObjects(
+            this.name = arrayOfNotPets[j].name,
+            this.type = arrayOfNotPets[j].type,
+            this.gender = arrayOfNotPets[j].gender,
+            this.breed = arrayOfNotPets[j].breed,
+            this.kidFriendly = arrayOfNotPets[j].kidFriendly,
+            this.petFriendly = arrayOfNotPets[j].petFriendly
+        );
+    }
+}
+
+
+
+
+
+
+
+
 
 renderPetProfiles();
