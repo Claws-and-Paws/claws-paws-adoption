@@ -229,9 +229,9 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
 
 function newPetObjects() {
     for (let i = 0; i < petProfiles.length; i++) {
-    new Pet(petProfiles[i].name, petProfiles[i].imgSrc, petProfiles[i].type, petProfiles[i].gender, petProfiles[i].breed, petProfiles[i].age, petProfiles[i].kidFriendly, petProfiles[i].petFriendly);
+        new Pet(petProfiles[i].name, petProfiles[i].imgSrc, petProfiles[i].type, petProfiles[i].gender, petProfiles[i].breed, petProfiles[i].age, petProfiles[i].kidFriendly, petProfiles[i].petFriendly);
     }
- 
+
 }
 
 
@@ -240,7 +240,7 @@ function newPetObjects() {
 
 function renderPetProfiles() {
     newPetObjects();
-console.log(petArray)
+    console.log(petArray)
     for (let i = 0; i < petArray.length; i++) {
         petArray[i].render();
     }
@@ -298,6 +298,25 @@ Pet.prototype.render = function () {
 
 
 
+let savePetInfo = localStorage.getItem('saveProduct');
+console.log('local storage', savePetInfo);
+
+if(savePetInfo) {
+    let arrayOfNotPets = JSON.parse(savePetInfo);
+    for(let j = 0; j < arrayOfNotPets, length; j++) {
+        new newPetObjects(
+            this.name = arrayOfNotPets[j].name,
+            this.type = arrayOfNotPets[j].type,
+            this.gender = arrayOfNotPets[j].gender,
+            this.breed = arrayOfNotPets[j].breed,
+            this.kidFriendly = arrayOfNotPets[j].kidFriendly,
+            this.petFriendly = arrayOfNotPets[j].petFriendly
+        );
+    }
+
+
+
+}
 
 
 
