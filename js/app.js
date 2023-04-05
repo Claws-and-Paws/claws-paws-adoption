@@ -7,7 +7,7 @@ let petArray = [];
 let petProfiles = [
     {
         name: 'Duke',
-        imgSrc: '../images/duke-dog',
+        imgSrc: '../images/duke-dog.png',
         type: 'Dog',
         gender: 'Male',
         breed: 'Australian Cattle Dog/Blue Heeler & Harrier Mix',
@@ -16,7 +16,7 @@ let petProfiles = [
         petFriendly: 'Good with other dogs, cats',
     }, {
         name: 'Nikki',
-        imgSrc: '../images/nikki-dog',
+        imgSrc: '../images/nikki-dog.png',
         type: 'Dog',
         gender: 'Female',
         breed: 'Rottweiler/German mix',
@@ -26,17 +26,17 @@ let petProfiles = [
 
     }, {
         name: 'Storm',
-        imgSrc: '../images/storm-dog',
+        imgSrc: '../images/storm-dog.png',
         type: 'Dog',
         gender: 'Female',
         breed: 'Mountain Cur',
-        age: 12, //weeks old 
+        age: 12, //weeks old
         kidFriendly: 'Good with children',
         petFriendly: 'Good with other dogs, cats, and other animals',
 
     }, {
         name: 'Mabel',
-        imgSrc: '../images/mabel-dog',
+        imgSrc: '../images/mabel-dog.png',
         type: 'Dog',
         gender: 'Female',
         breed: 'Terrier',
@@ -46,7 +46,7 @@ let petProfiles = [
 
     }, {
         name: 'Knox',
-        imgSrc: '../images/knox-dog',
+        imgSrc: '../images/knox-dog.png',
         type: 'Dog',
         gender: 'Male',
         breed: 'Chocolate Labrador Retriever',
@@ -56,7 +56,7 @@ let petProfiles = [
 
     }, {
         name: 'Bleu',
-        imgSrc: '../images/bleu-dog',
+        imgSrc: '../images/bleu-dog.png',
         type: 'Dog',
         gender: 'Male',
         breed: 'Siberian Husky',
@@ -66,7 +66,7 @@ let petProfiles = [
 
     }, {
         name: 'Talor',
-        imgSrc: '../images/talor-dog',
+        imgSrc: '../images/talor-dog.png',
         type: 'Dog',
         gender: 'Male',
         breed: 'French Bulldog',
@@ -76,7 +76,7 @@ let petProfiles = [
 
     }, {
         name: 'Kingston',
-        imgSrc: '../images/kingston-dog',
+        imgSrc: '../images/kingston-dog.png',
         type: 'Dog',
         gender: 'Male',
         breed: 'Pomeranian mix',
@@ -86,7 +86,7 @@ let petProfiles = [
 
     }, {
         name: 'Amy',
-        imgSrc: '../images/amy-dog',
+        imgSrc: '../images/amy-dog.png',
         type: 'Dog',
         gender: 'Female',
         breed: 'Goldendoodle & Irish Setter Mix',
@@ -96,7 +96,7 @@ let petProfiles = [
 
     }, {
         name: 'Gizmo',
-        imgSrc: '../images/gizmo-dog',
+        imgSrc: '../images/gizmo-dog.png',
         type: 'Dog',
         gender: 'Male',
         breed: 'Jack Russell Terrier Mix',
@@ -106,7 +106,7 @@ let petProfiles = [
 
     }, {
         name: 'Andi',
-        imgSrc: '../images/andi-cat',
+        imgSrc: '../images/andi-cat.png',
         type: 'Cat',
         gender: 'Female',
         breed: 'Domestic Short Hair',
@@ -116,7 +116,7 @@ let petProfiles = [
 
     }, {
         name: 'Cade',
-        imgSrc: '../images/cade-cat',
+        imgSrc: '../images/cade-cat.png',
         type: 'Cat',
         gender: 'Male',
         breed: 'Domestic Short Hair',
@@ -126,7 +126,7 @@ let petProfiles = [
 
     }, {
         name: 'Dixie',
-        imgSrc: '../images/dixie-cat',
+        imgSrc: '../images/dixie-cat.png',
         type: 'Cat',
         gender: 'Female',
         breed: 'Domestic Long Hair',
@@ -136,7 +136,7 @@ let petProfiles = [
 
     }, {
         name: 'Mowgli',
-        imgSrc: '../images/mowgli-cat',
+        imgSrc: '../images/mowgli-cat.png',
         type: 'Cat',
         gender: 'Male',
         breed: 'Domestic Short Hair',
@@ -146,7 +146,7 @@ let petProfiles = [
 
     }, {
         name: 'Sienna',
-        imgSrc: '../images/sienna-cat',
+        imgSrc: '../images/sienna-cat.png',
         type: 'Cat',
         gender: 'Female',
         breed: 'Domestic Short Hair',
@@ -154,19 +154,9 @@ let petProfiles = [
         kidFriendly: 'Yes',
         petFriendly: 'Yes',
 
-    }, {
-        name: 'Simba',
-        imgSrc: '../images/simba-cat',
-        type: 'Cat',
-        gender: 'Male',
-        breed: 'Domestic Short Hair',
-        age: 52,
-        kidFriendly: 'Yes',
-        petFriendly: 'No',
-
-    }, {
+    },  {
         name: 'Trixie',
-        imgSrc: '../images/trixie-cat',
+        imgSrc: '../images/trixie-cat.png',
         type: 'Cat',
         gender: 'Female',
         breed: 'Domestic Long Hair',
@@ -176,7 +166,7 @@ let petProfiles = [
 
     }, {
         name: 'Plano',
-        imgSrc: '../images/plano-cat',
+        imgSrc: '../images/plano-cat.png',
         type: 'Cat',
         gender: 'Male',
         breed: 'Domestic Short Hair',
@@ -186,7 +176,7 @@ let petProfiles = [
 
     }, {
         name: 'Pepper Jack',
-        imgSrc: '../images/pepperjack-cat',
+        imgSrc: '../images/pepperjack-cat.png',
         type: 'Cat',
         gender: 'Female',
         breed: 'Domestic Long Hair',
@@ -196,7 +186,7 @@ let petProfiles = [
 
     }, {
         name: 'Mildred',
-        imgSrc: '../images/mildred-cat',
+        imgSrc: '../images/mildred-cat.png',
         type: 'Cat',
         gender: 'Female',
         breed: 'Domestic Short Hair',
@@ -219,114 +209,78 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
     this.kidFriendly = kidFriendly;
     this.petFriendly = petFriendly;
 
+
+    if (this.age < 52) {
+        this.formattedAge = `${Math.round(this.age / 4)} months old`;
+    } else {
+        this.formattedAge = `${Math.round(this.age / 52)} years old`;
+    }
+
+
     petArray.push(this);
+    this.renderPetCard = function () {
+        let ourPets = document.querySelector(".our-pets__container");
 
+        let petCard = document.createElement("div");
+        petCard.classList.add("our-pets__card");
+
+        let petName = document.createElement("h3");
+        petName.textContent = this.name;
+        petCard.appendChild(petName);
+
+        let petImg = document.createElement("img");
+        petImg.setAttribute("src", this.imgSrc);
+        petCard.appendChild(petImg);
+
+        let petType = document.createElement("p");
+        petType.textContent = `Type: ${this.type}`;
+        petCard.appendChild(petType);
+
+        let petGender = document.createElement("p");
+        petGender.textContent = `Gender: ${this.gender}`;
+        petCard.appendChild(petGender);
+
+        let petBreed = document.createElement("p");
+        petBreed.textContent = `Breed: ${this.breed}`;
+        petCard.appendChild(petBreed);
+
+        let petAge = document.createElement("p");
+        petAge.textContent = `Age: ${this.formattedAge}`;
+        petCard.appendChild(petAge);
+
+        let petKidFriendly = document.createElement("p");
+        petKidFriendly.textContent = `Kid Friendly: ${this.kidFriendly}`;
+        petCard.appendChild(petKidFriendly);
+
+        let petPetFriendly = document.createElement("p");
+        petPetFriendly.textContent = `Pet Friendly: ${this.petFriendly}`;
+        petCard.appendChild(petPetFriendly);
+
+        ourPets.appendChild(petCard);
+    };
 }
-
-
-
-
 
 function newPetObjects() {
     for (let i = 0; i < petProfiles.length; i++) {
-    new Pet(petProfiles[i].name, petProfiles[i].imgSrc, petProfiles[i].type, petProfiles[i].gender, petProfiles[i].breed, petProfiles[i].age, petProfiles[i].kidFriendly, petProfiles[i].petFriendly);
+        let pet = petProfiles[i];
+        new Pet(
+            pet.name,
+            pet.imgSrc,
+            pet.type,
+            pet.gender,
+            pet.breed,
+            pet.age,
+            pet.kidFriendly,
+            pet.petFriendly
+        );
     }
- 
 }
-
-
-
-
 
 function renderPetProfiles() {
     newPetObjects();
-console.log(petArray)
     for (let i = 0; i < petArray.length; i++) {
-        petArray[i].render();
+        petArray[i].renderPetCard();
     }
-
 }
-
-
-Pet.prototype.render = function () {
-    let parentElement = document.getElementById('our-pets');
-
-    let div = document.createElement('div');
-    parentElement.appendChild(div);
-
-    let h2 = document.createElement('h2');
-    h2.textContent = this.petName;
-    div.appendChild(h2);
-
-    let petPara = document.createElement('p');
-    petPara.textContent = 'Pet\'s age is ' + this.age;
-    div.appendChild(petPara);
-
-    let petUl = document.createElement('ul');
-    div.appendChild(petUl);
-
-    let breedLi = document.createElement('li');
-    breedLi.textContent = this.breed;
-    petUl.appendChild(breedLi);
-
-    let typeLi = document.createElement('li');
-    typeLi.textContent = this.type;
-    petUl.appendChild(typeLi);
-
-    let genderLi = document.createElement('li');
-    typeLi.textContent = this.gender;
-    petUl.appendChild(genderLi);
-
-    let kidLi = document.createElement('li');
-    typeLi.textContent = this.kidFriendly;
-    petUl.appendChild(kidLi);
-
-    let petLi = document.createElement('li');
-    typeLi.textContent = this.petFriendly;
-    petUl.appendChild(petLi);
-
-
-
-
-    let imgSrc = document.createElement('img');
-    imgSrc.setAttribute('src', 'images/' + this.imgSrc + '.png');
-    imgSrc.setAttribute('alt', 'Adopt a pet today!');
-    div.appendChild(imgSrc);
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 renderPetProfiles();
-
-
-
-
-
-
-
-
-
-
-
-
-// if petProfiles[age] > 8 && < 52 {
-//     let months = petProfiles[age]/4
-//     console.log('your pet is ${months} old'),
-// } else if petProfiles[age] > 52 {
-// let years = petProfiles[age]/52,
-// console.log('Your pet is ${years} old'),
-// }
-
-
-
