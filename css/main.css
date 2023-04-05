@@ -1,64 +1,85 @@
 .page {
     max-width: 1440px;
     margin: 0 auto;
-    background-color: bisque;
+    background-color: #dfc8b0;
+    color: black;
 }
 
 .header {
     height: 500px;
-    border: 1px solid red;
+    background-image: url(../images/header-banner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .nav {
-    height: 200px;
+    height: 100px;
+    /* background-color: #151316; */
+    position: relative;
+}
+
+.nav__logo {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
 }
 
 .nav__links {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-right: 30px;
     gap: 20px;
     list-style-type: none;
-    padding-top: 20px;
+    padding-top: 35px;
 }
 
-.nav__link{
+.nav__link {
     text-decoration: none;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #e77836;
+    border: 1px solid #e77836;
+    border-radius: 8px;
+    background-color: #3f1409;
 }
 
 .nav__link:hover {
     opacity: 0.7;
 }
 
-.user-form{
+.user-form {
     height: auto;
     text-align: center;
-    border: 1px solid red;
 }
 
-
+.user-form__title {
+    padding-top: 30px;
+    font-size: 35px;
+    line-height: 40px;
+}
 
 .form {
     margin: 0 auto;
-        max-width: 385px;
-        margin-top: 80px;
-        padding-bottom: 120px;
+    max-width: 385px;
+    margin-top: 80px;
+    padding-bottom: 120px;
 }
 
 .form__fieldset {
     border: none;
-        margin: auto;
-        max-width: 385px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
+    margin: auto;
+    max-width: 385px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
 }
 
 .form__label {
-margin-bottom: 8px;
+    margin-bottom: 8px;
     font-family: "Inter", "Arial", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -70,14 +91,15 @@ margin-bottom: 8px;
     margin-bottom: 0;
 }
 
-.form__input, .form__select {
+.form__input,
+.form__select {
     border: #838383 solid 1px;
-        border-radius: 4px;
-        width: 100%;
-        height: 50px;
-        margin-bottom: 32px;
-        padding: 15px;
-        box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 32px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 
@@ -95,11 +117,12 @@ margin-bottom: 8px;
     width: 100%;
     max-width: 385px;
     margin-bottom: 32px;
-    background-color: #D88475;
+    background-color: #3f1409;
     color: #fff;
+    font-size: 18px;
     cursor: pointer;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
@@ -108,12 +131,12 @@ margin-bottom: 8px;
 }
 
 .form__link {
-    border: 1px solid #D88475;
+    border: 1px solid white;
     height: 25px;
     width: 100px;
     font-size: 20px;
     padding: 10px;
-    background-color: #D88475;
+    background-color: #3f1409;
     text-decoration: none;
     border-radius: 8px;
     color: white;
@@ -125,12 +148,12 @@ margin-bottom: 8px;
 
 
 
-.our-pets{
-    height: auto;
+.our-pets {
+    height: 850px;
     text-align: center;
-    border: 1px solid red;
+    background-image: radial-gradient(circle, rgba(49, 34, 25, 0.9), rgba(223, 200, 176, 0.6));
+    overflow: scroll;
 }
-
 
 .our-pets__container {
     display: grid;
@@ -141,20 +164,35 @@ margin-bottom: 8px;
 }
 
 .our-pets__title {
-    font-size: 24px;
+    padding-top: 30px;
+    font-size: 35px;
+    line-height: 40px;
     font-weight: bold;
     margin-bottom: 16px;
     text-align: center;
 }
 
 .our-pets__card {
-    background-color: #fff;
+    background-color: #a29d90;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(26, 43, 57, 0.3);
     padding: 16px;
     margin: 0;
     width: 100%;
     max-width: 300px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.our-pets__card:hover {
+    box-shadow: 0 10px 20px rgba(26, 43, 57, 0.4);
+    transform: translateY(-5px);
+}
+
+.our-pets__card:active {
+    box-shadow: 0 3px 6px rgba(26, 43, 57, 0.4);
+    transform: translateY(0px);
+    transition: all 0.1s ease;
 }
 
 .our-pets__card-title {
@@ -202,7 +240,6 @@ margin-bottom: 8px;
     justify-content: space-between;
     padding: 20px;
     height: 300px;
-    border: 1px solid red;
 }
 
 .partners__list {
@@ -220,34 +257,92 @@ margin-bottom: 8px;
     opacity: 0.7;
 }
 
-
+.footer {
+    background-color: #dfc8b0;
+    color: #312219;
+}
 
 .footer__lists {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
+.partners {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.socials {
+    width: auto;
+    margin-right: 20px;
+}
+
+.contact-us {
+    width: 200px;
+}
+
+.contact-us__phone,
+.contact-us__email {
+    margin-top: 10px;
+}
 
 .footer__text {
     padding: 10px;
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: #312219;
     border-radius: 5px;
+    color: #dfc8b0;
+    font-size: 18px;
+    line-height: 20px;
 }
 
+.partners__title,
+.socials__title,
+.contact-us__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.socials__title {
+    text-align: center;
+}
+
+.partners__list-item,
+.socials__link,
+.contact-us__phone,
+.contact-us__email {
+    color: #312219;
+}
 
 .socials__links {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .socials__link {
     text-decoration: none;
+    background-color: #a29d90;
+    color: #312219;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .socials__link:hover {
     opacity: 0.7;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
