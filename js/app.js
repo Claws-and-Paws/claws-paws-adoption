@@ -308,12 +308,11 @@ if(savePetInfo) {
             this.name = arrayOfNotPets[j].name,
             this.type = arrayOfNotPets[j].type,
             this.gender = arrayOfNotPets[j].gender,
-            this.breed = arrayOfNotPets[j].breed
-
-        )
+            this.breed = arrayOfNotPets[j].breed,
+            this.kidFriendly = arrayOfNotPets[j].kidFriendly,
+            this.petFriendly = arrayOfNotPets[j].petFriendly
+        );
     }
-
-
 
 
 
