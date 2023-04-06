@@ -1,0 +1,42 @@
+.our-pet-stats {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 35px;
+    background-image: linear-gradient(to bottom, rgba(49, 34, 25, 0.9), rgba(223, 200, 176, 0.6));
+}
+.stats {
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(49, 34, 25, 0.9), rgba(223, 200, 176, 0.6));
+}
+
+.stats__title {
+    margin: 0;
+    padding-top: 30px;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.stats__container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.stats__individualContainer {
+    width: 350px;
+    height: auto;
+    text-align: center;
+}
+
+.stats__dogbreeds-title, .stats__catbreeds-title {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+
+.chart-container {
+    height: 400px;
+    width: 400px;
+}
