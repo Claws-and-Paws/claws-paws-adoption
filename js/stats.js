@@ -206,7 +206,8 @@ let petProfiles = [
 ];
 
 
-
+// Empty array to store unique breed names.
+let breedNames = [];
 
 
 
