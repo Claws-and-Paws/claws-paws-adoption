@@ -268,8 +268,48 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
         petCard.appendChild(petPetFriendly);
 
         ourPets.appendChild(petCard);
+        let likeButton = document.createElement("button");
+        likeButton.className = 'our-pets__like-button';
+        likeButton.textContent = "❤️";
+        petCard.appendChild(likeButton);
+
+        likeButton.addEventListener("click", () => {
+            // Check if card already exists in favorites
+            let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+            let cardExists = false;
+            for (let i = 0; i < favorites.length; i++) {
+                if (favorites[i].name === this.name) {
+                    cardExists = true;
+                    break;
+                }
+            }
+
+            // If card does not already exist, add it to favorites
+            if (!cardExists) {
+                favorites.push({
+                    imgSrc: this.imgSrc,
+                    name: this.name,
+                    type: this.type,
+                    gender: this.gender,
+                    breed: this.breed,
+                    age: this.age,
+                    formattedAge: this.formattedAge,
+                    kidFriendly: this.kidFriendly,
+                    petFriendly: this.petFriendly
+                });
+                localStorage.setItem("favorites", JSON.stringify(favorites));
+            }
+        });
+
     };
 }
+
+// Iterate over petProfiles array and create pet objects
+petProfiles.forEach(function (petProfile) {
+    let pet = new Pet(petProfile.name, petProfile.imgSrc, petProfile.type, petProfile.gender, petProfile.breed, petProfile.age, petProfile.kidFriendly, petProfile.petFriendly);
+    pet.renderPetCard();
+});
+
 
 function newPetObjects() {
     for (let i = 0; i < petProfiles.length; i++) {
@@ -288,33 +328,27 @@ function newPetObjects() {
 
 }
 
-function renderPetProfiles() {
-    newPetObjects();
-    for (let i = 0; i < petArray.length; i++) {
-        petArray[i].renderPetCard();
-    }
-}
+// Iterate over petProfiles array and create pet objects
+petProfiles.forEach(function (petProfile) {
+    let pet = new Pet(petProfile.name, petProfile.imgSrc, petProfile.type, petProfile.gender, petProfile.breed, petProfile.age, petProfile.kidFriendly, petProfile.petFriendly);
+    pet.renderPetCard();
+});
 
 
 
+// let savePetInfo = localStorage.getItem('saveProduct');
+// console.log('local storage', savePetInfo);
 
-let savePetInfo = localStorage.getItem('saveProduct');
-console.log('local storage', savePetInfo);
-
-if (savePetInfo) {
-    let arrayOfNotPets = JSON.parse(savePetInfo);
-    for (let j = 0; j < arrayOfNotPets, length; j++) {
-        new newPetObjects(
-            this.name = arrayOfNotPets[j].name,
-            this.type = arrayOfNotPets[j].type,
-            this.gender = arrayOfNotPets[j].gender,
-            this.breed = arrayOfNotPets[j].breed,
-            this.kidFriendly = arrayOfNotPets[j].kidFriendly,
-            this.petFriendly = arrayOfNotPets[j].petFriendly
-        );
-    }
-}
-
-renderPetProfiles();
-
-
+// if (savePetInfo) {
+//     let arrayOfNotPets = JSON.parse(savePetInfo);
+//     for (let j = 0; j < arrayOfNotPets.length; j++) {
+//         new newPetObjects(
+//             this.name = arrayOfNotPets[j].name,
+//             this.type = arrayOfNotPets[j].type,
+//             this.gender = arrayOfNotPets[j].gender,
+//             this.breed = arrayOfNotPets[j].breed,
+//             this.kidFriendly = arrayOfNotPets[j].kidFriendly,
+//             this.petFriendly = arrayOfNotPets[j].petFriendly
+//         );
+//     }
+// };
