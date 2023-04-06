@@ -19,8 +19,8 @@
 }
 
 .images {
-    width: 15rem;
-    height: 15rem;
+    width: 17rem;
+    height: 17rem;
     object-fit: cover;
     object-position: top;
     border-radius: 50%;
@@ -28,7 +28,8 @@
     position: relative;
     top: 0;
     transition: 250ms top ease-in-out;
-    margin-bottom: 50px;
+    margin-top: 45px;
+    margin-bottom: 40px;
     box-shadow: 2px 2px 5px 0;
 }
 
@@ -37,7 +38,7 @@
     position: absolute;
     font-size: 25px;
     color: white;
-    background-color: rgba(53, 49, 49, 0.437);
+    background-color: rgba(53, 49, 49, 0.477);
     border-radius: 5px;
     width: 170px;
     padding: 7px;
@@ -62,33 +63,46 @@
 }
 
 #first-bio {
-    width: 1800px;
-    height: 300px;
+    width: 300px;
+    height: 250px;
     padding-left: 20px;
     padding-right: 20px;
     background-color: rgba(77, 67, 63, 0.289);
     color: white;
     overflow: scroll;
-    margin-left: 140px;
+    margin-left: 200px;
     margin-top: 30px;
 }
 
 #second-bio {
-    width: 1800px;
-    height: 300px;
+    width: 300px;
+    height: 250px;
     padding-left: 20px;
     padding-right: 20px;
     background-color: rgba(77, 67, 63, 0.289);
     color: white;
     overflow: scroll;
-    margin-left: 1px;
     margin-top: 30px;
+    margin-left: 5px;
+}
 
-
+#third-bio {
+    width: 300px;
+    height: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(77, 67, 63, 0.289);
+    color: white;
+    overflow: scroll;
+    margin-top: 30px;
+    margin-left: 5px;
 }
 
 .biographies h2 {
 font-size: 25px;
+text-decoration: underline;
 }
 
-
+.biographies p {
+margin: 5px;
+}
