@@ -304,6 +304,7 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
     };
 }
 
+
 // Iterate over petProfiles array and create pet objects
 petProfiles.forEach(function (petProfile) {
     let pet = new Pet(petProfile.name, petProfile.imgSrc, petProfile.type, petProfile.gender, petProfile.breed, petProfile.age, petProfile.kidFriendly, petProfile.petFriendly);
@@ -311,44 +312,20 @@ petProfiles.forEach(function (petProfile) {
 });
 
 
-function newPetObjects() {
-    for (let i = 0; i < petProfiles.length; i++) {
-        let pet = petProfiles[i];
-        new Pet(
-            pet.name,
-            pet.imgSrc,
-            pet.type,
-            pet.gender,
-            pet.breed,
-            pet.age,
-            pet.kidFriendly,
-            pet.petFriendly
+
+let savePetInfo = localStorage.getItem('saveProduct');
+console.log('local storage', savePetInfo);
+
+if (savePetInfo) {
+    let arrayOfNotPets = JSON.parse(savePetInfo);
+    for (let j = 0; j < arrayOfNotPets.length; j++) {
+        new newPetObjects(
+            this.name = arrayOfNotPets[j].name,
+            this.type = arrayOfNotPets[j].type,
+            this.gender = arrayOfNotPets[j].gender,
+            this.breed = arrayOfNotPets[j].breed,
+            this.kidFriendly = arrayOfNotPets[j].kidFriendly,
+            this.petFriendly = arrayOfNotPets[j].petFriendly
         );
     }
-
-}
-
-// Iterate over petProfiles array and create pet objects
-petProfiles.forEach(function (petProfile) {
-    let pet = new Pet(petProfile.name, petProfile.imgSrc, petProfile.type, petProfile.gender, petProfile.breed, petProfile.age, petProfile.kidFriendly, petProfile.petFriendly);
-    pet.renderPetCard();
-});
-
-
-
-// let savePetInfo = localStorage.getItem('saveProduct');
-// console.log('local storage', savePetInfo);
-
-// if (savePetInfo) {
-//     let arrayOfNotPets = JSON.parse(savePetInfo);
-//     for (let j = 0; j < arrayOfNotPets.length; j++) {
-//         new newPetObjects(
-//             this.name = arrayOfNotPets[j].name,
-//             this.type = arrayOfNotPets[j].type,
-//             this.gender = arrayOfNotPets[j].gender,
-//             this.breed = arrayOfNotPets[j].breed,
-//             this.kidFriendly = arrayOfNotPets[j].kidFriendly,
-//             this.petFriendly = arrayOfNotPets[j].petFriendly
-//         );
-//     }
-// };
+};
