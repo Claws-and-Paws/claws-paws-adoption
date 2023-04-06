@@ -19,13 +19,6 @@
     border-radius: 10px;
 }
 
-/* .faves {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-} */
-
 .faves__container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
