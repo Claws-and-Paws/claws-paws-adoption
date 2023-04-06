@@ -1,10 +1,6 @@
-'use strict';
-console.log('dawgs baby!');
+`use strict`
+console.log('file connected');
 
-
-let form = document.getElementById('form');
-let allRequests = [];
-let petArray = [];
 let petProfiles = [
     {
         name: 'Duke',
@@ -210,190 +206,170 @@ let petProfiles = [
 
 
 
-function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
-    this.name = name;
-    this.imgSrc = imgSrc;
-    this.type = type;
-    this.gender = gender;
-    this.breed = breed;
-    this.age = age;
-    this.kidFriendly = kidFriendly;
-    this.petFriendly = petFriendly;
-
-
-    if (this.age < 52) {
-        this.formattedAge = `${Math.round(this.age / 4)} months old`;
-    } else {
-        this.formattedAge = `${Math.round(this.age / 52)} years old`;
+// Count the occurrences of each breed
+const breedCounts = petProfiles.reduce(function (acc, pet) {
+    // If the breed is not already in the accumulator, initialize its count to 0
+    if (!acc.hasOwnProperty(pet.breed)) {
+        acc[pet.breed] = 0;
     }
 
+    // Increment the count for the current pet's breed
+    acc[pet.breed] += 1;
 
-    petArray.push(this);
+    // Return the updated accumulator
+    return acc;
+}, {});
 
-    this.renderPetCard = function () {
-        let ourPets = document.querySelector(".our-pets__container");
+// Create an array of breed names (from the keys of breedCounts)
+const breedNames = Object.keys(breedCounts);
 
-        let petCard = document.createElement("div");
-        petCard.classList.add("our-pets__card");
+// Create an array of breed occurrences (from the values of breedCounts)
+const breedOccurrences = Object.values(breedCounts);
 
-        let petName = document.createElement("h3");
-        petName.textContent = this.name;
-        petCard.appendChild(petName);
+// Get the canvas element by its id to render the chart
+const ctx = document.getElementById('breedChart').getContext('2d');
 
-        let petImg = document.createElement("img");
-        petImg.setAttribute("src", this.imgSrc);
-        petCard.appendChild(petImg);
+const chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: breedNames,
+        datasets: [{
+            label: 'Number of Pets Avaiable by Breed',
+            data: breedOccurrences,
+            backgroundColor: 'rgba(205, 133, 63, 0.5)', 
+            borderColor: 'rgb(245, 245, 245)',
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            },
+            x: {
+                ticks: {
+                    font: {
+                        size: 15 // Adjust the font size of breed names
+                    }
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                labels: {
+                    color: 'rgba(245, 245, 220, 0.5)',
+                    font: {
+                        size: 50
+                    }
+                }
+            }
+        }
+    }
+});
 
-        let petType = document.createElement("p");
-        petType.textContent = `Type: ${this.type}`;
-        petCard.appendChild(petType);
 
-        let petGender = document.createElement("p");
-        petGender.textContent = `Gender: ${this.gender}`;
-        petCard.appendChild(petGender);
 
-        let petBreed = document.createElement("p");
-        petBreed.textContent = `Breed: ${this.breed}`;
-        petCard.appendChild(petBreed);
 
-        let petAge = document.createElement("p");
-        petAge.textContent = `Age: ${this.formattedAge}`;
-        petCard.appendChild(petAge);
 
-        let petKidFriendly = document.createElement("p");
-        petKidFriendly.textContent = `Kid Friendly: ${this.kidFriendly}`;
-        petCard.appendChild(petKidFriendly);
+// Cart representing most common dog breeds in shelters.
+document.addEventListener("DOMContentLoaded", function () {
+    const ctx = document.getElementById("dogBreedsChart").getContext("2d");
 
-        let petPetFriendly = document.createElement("p");
-        petPetFriendly.textContent = `Pet Friendly: ${this.petFriendly}`;
-        petCard.appendChild(petPetFriendly);
-
-        ourPets.appendChild(petCard);
+    const dogBreedsData = {
+        labels: [
+            "Pit Bull Terrier",
+            "Labrador Retriever",
+            "German Shepherd"
+        ],
+        datasets: [
+            {
+                data: [35, 25, 20,],
+                backgroundColor: [
+                    "#A6ACAF",
+                    "#787878",
+                    "#6C7B8B",
+                    "#778899",
+                    "#B2BEB5",
+                    "#C0C0C0",
+                ],
+            },
+        ],
     };
-    //add pets to local storage maybe not yet
-    // let petsLocalStorage = JSON.stringify(petArray);
-    // localStorage.setItem('petObjects',   petsLocalStorage);
-}
 
-//adding second constructor for taking new pet requests from customer
-function PetRequest(name, type, age, breed, friendly){
-    this.name = name;
-    this.type = type;
-    this.age = age;
-    this.breed = breed;
-    this.friendly = friendly;
+    const pieChartOptions = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'right',
+                labels: {
+                    font: {
+                        size: 13 // Set the desired font size for the legend labels
+                    }
+                }
+            }
+        },
+        layout: {
+            padding: {
+                left: 0,
+                right: 20,
+                top: 0,
+                bottom: 0
+            }
+        }
+    };
 
-    allRequests.push(this);
-    let allRequestsLocalStorage = JSON.stringify(allRequests);
-    localStorage.setItem('petRequest',  allRequestsLocalStorage);
-}
-// console.log('did we get a new request', allRequests);
+    const dogBreedsChart = new Chart(ctx, {
+        type: "pie",
+        data: dogBreedsData,
+        options: pieChartOptions,
+    });
+});
 
+// chart representing most common cat breeds in dog shelters
+const catCtx = document.getElementById("catBreedsChart").getContext("2d");
 
-
-
-
-function newPetObjects() {
-    for (let i = 0; i < petProfiles.length; i++) {
-        let pet = petProfiles[i];
-        new Pet(
-            pet.name,
-            pet.imgSrc,
-            pet.type,
-            pet.gender,
-            pet.breed,
-            pet.age,
-            pet.kidFriendly,
-            pet.petFriendly
-        );
-    }
-
-}
-
-
-function renderPetProfiles() {
-    newPetObjects();
-    for (let i = 0; i < petArray.length; i++) {
-        petArray[i].renderPetCard();
-    }
-}
-
-
-
-function handleNewSubmit(event) {
-    event.preventDefault();
-    console.log(event.target.name.value);
-    event.stopPropagation();
-
-    let name = event.target.name.value;
-    let type = document.getElementById('pet-type').value;
-    // console.log(type);
-
-    let age = document.getElementById('pet-age').value;
-    // console.log(age);
-
-    let breed = document.getElementById('breed').value;
-    // console.log(breed)
-
-    let friendly = document.getElementById('kid-pet-friendly').value;
-
-    // let petFriendly = document.getElementById('kid-pet-friendly').value;
-    // console.log(name, type, age, breed, friendly);
-
-    let newPetRequest = new PetRequest(name, type, age, breed, friendly);
-    // console.log('newnewnew pet request', typeof newPetRequest);
-    form.reset();
+const catBreedsData = {
+    labels: [
+        "Domestic Shorthair",
+        "Domestic Mediumhair",
+        "Domestic Longhair",
+    ],
+    datasets: [
+        {
+            data: [60, 25, 15],
+            backgroundColor: [
+                "#A6ACAF",
+                "#787878",
+                "#6C7B8B",
+            ],
+        },
+    ],
 };
 
+const catPieChartOptions = {
+    responsive: true,
+    plugins: {
+        legend: {
+            position: 'right',
+            labels: {
+                font: {
+                    size: 13 // Set the desired font size for the legend labels
+                }
+            }
+        }
+    },
+    layout: {
+        padding: {
+            left: 0,
+            right: 20,
+            top: 0,
+            bottom: 0
+        }
+    }
+};
 
-
-
-// function renderResults() {
-
-//     let section = document.getElementById('results__container');
-//     for(let i = 0; i < Pet.petArray.length; i++); {
-//         let p = document.createElement('p');
-//         p.textContent = `${this.name} ${this.imgSrc} ${this.type} ${this.gender} ${this.breed} ${this.formattedAge} ${this.kidFriendly} ${this.petFriendly}`;
-
-//         console.log("🚀 ~ file: app.js:329 ~ renderResults ~    p.textContent :",    p.textContent )
-//     }
-
-// }
-
-
-
-let savedPetInfo = localStorage.getItem('petRequest');
-console.log('local storage', JSON.parse(savedPetInfo));
-
-// if (savedPetInfo) {
-//     let arrayOfNotPets = JSON.parse(savedPetInfo);
-//     for (let j = 0; j < arrayOfNotPets, length; j++); {
-//         new Product(
-//             this.name = arrayOfNotPets[j].name,
-//             this.type = arrayOfNotPets[j].type,
-//             this.gender = arrayOfNotPets[j].gender,
-//             this.breed = arrayOfNotPets[j].breed,
-//             this.friendly = arrayOfNotPets[j].friendly
-//         )
-
-//     };
-
-// } else {
-//     petProfiles = [];
-
-
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-form.addEventListener('submit', handleNewSubmit);
-renderPetProfiles();
+const catBreedsChart = new Chart(catCtx, {
+    type: 'pie',
+    data: catBreedsData,
+    options: catPieChartOptions
+});

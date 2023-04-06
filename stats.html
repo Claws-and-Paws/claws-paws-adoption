@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Claws & Paws Adoption</title>
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <nav class="nav">
+                <img class="nav__logo" src="images/logo.png" alt="logo">
+                <ul class="nav__links">
+                    <li><a class="nav__link" href="index.html">Home</a></li>
+                    <li><a class="nav__link" href="results.html">Results</a></li>
+                    <li><a class="nav__link" href="stats.html">Stats</a></li>
+                    <li><a class="nav__link" href="about-us.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="our-pet-stats">
+                <div class="our-pet-stats__container">
+                <canvas id="breedChart"></canvas>
+                </div>
+            </section>
+            <section class="stats">
+                <h2 class="stats__title">National Statistics</h2>
+                <div class="stats__container">
+                <div class="stats__individualContainer">
+                    <h3 class="stats__dogbreeds-title">Most Common Dog Breeds In Shelters</h3>
+                    <div class="chart-container">
+                        <canvas id="dogBreedsChart"></canvas>
+                    </div>
+                </div>
+                <div class="stats__individualContainer">
+                    <h3 class="stats__catbreeds-title">Most Common Cat Breeds In Shelters</h3>
+                    <div class="chart-container">
+                        <canvas id="catBreedsChart"></canvas>
+                    </div>
+                </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__lists">
+                <section class="partners">
+                    <h2 class="partners__title">Our Partners</h2>
+                    <ul class="partners__list">
+                        <li><a class="partners__list-item" href="#">Cedar Rapids Adoption</a></li>
+                        <li><a class="partners__list-item" href="#">Iowa city Adoption</a></li>
+                        <li><a class="partners__list-item" href="#">Des Moines Adoption</a></li>
+                    </ul>
+                </section>
+                <section class="socials">
+                    <h2 class="socials__title">Follow Us</h2>
+                    <ul class="socials__links">
+                        <li><a class="socials__link" href="#">Facebook</a></li>
+                        <li><a class="socials__link" href="#">Instagram</a></li>
+                        <li><a class="socials__link" href="#">Twitter</a></li>
+                    </ul>
+                </section>
+                <section class="contact-us">
+                    <h2 class="contact-us__title">Contact Us</h2>
+                    <p class="contact-us__phone">(319) 999-9999</p>
+                    <p class="contact-us__email">catsandpaws@hotmail.com</p>
+                </section>
+            </div>
+            <section class="footer__text">
+                <p class="footer__copyright">&copy; Tricia Sawyer, Bryan Gonzalez, and Tim Maupin </p>
+            </section>
+        </footer>
+    </div>
+    <script src="js/stats.js"></script>
+</body>
+
+</html>
