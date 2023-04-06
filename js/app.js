@@ -401,8 +401,8 @@ function handleNewSubmit(event) {
 
 
 
-let savedPetInfo = localStorage.getItem('petRequest');
-console.log('local storage', JSON.parse(savedPetInfo));
+// let savedPetInfo = localStorage.getItem('petRequest');
+// console.log('local storage', JSON.parse(savedPetInfo));
 
 // if (savedPetInfo) {
 //     let arrayOfNotPets = JSON.parse(savedPetInfo);
