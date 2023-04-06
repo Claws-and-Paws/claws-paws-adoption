@@ -269,6 +269,39 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
         petCard.appendChild(petPetFriendly);
 
         ourPets.appendChild(petCard);
+        let likeButton = document.createElement("button");
+        likeButton.className = 'our-pets__like-button';
+        likeButton.textContent = "❤️";
+        petCard.appendChild(likeButton);
+
+        likeButton.addEventListener("click", () => {
+            // Check if card already exists in favorites
+            let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+            let cardExists = false;
+            for (let i = 0; i < favorites.length; i++) {
+                if (favorites[i].name === this.name) {
+                    cardExists = true;
+                    break;
+                }
+            }
+
+            // If card does not already exist, add it to favorites
+            if (!cardExists) {
+                favorites.push({
+                    imgSrc: this.imgSrc,
+                    name: this.name,
+                    type: this.type,
+                    gender: this.gender,
+                    breed: this.breed,
+                    age: this.age,
+                    formattedAge: this.formattedAge,
+                    kidFriendly: this.kidFriendly,
+                    petFriendly: this.petFriendly
+                });
+                localStorage.setItem("favorites", JSON.stringify(favorites));
+            }
+        });
+
     };
     //add pets to local storage maybe not yet
     // let petsLocalStorage = JSON.stringify(petArray);
@@ -318,6 +351,11 @@ function renderPetProfiles() {
     }
 }
 
+// Iterate over petProfiles array and create pet objects
+petProfiles.forEach(function (petProfile) {
+    let pet = new Pet(petProfile.name, petProfile.imgSrc, petProfile.type, petProfile.gender, petProfile.breed, petProfile.age, petProfile.kidFriendly, petProfile.petFriendly);
+    pet.renderPetCard();
+});
 
 
 function handleNewSubmit(event) {
@@ -328,6 +366,7 @@ function handleNewSubmit(event) {
     let name = event.target.name.value;
     let type = document.getElementById('pet-type').value;
     // console.log(type);
+
 
     let age = document.getElementById('pet-age').value;
     // console.log(age);
@@ -367,7 +406,7 @@ console.log('local storage', JSON.parse(savedPetInfo));
 
 // if (savedPetInfo) {
 //     let arrayOfNotPets = JSON.parse(savedPetInfo);
-//     for (let j = 0; j < arrayOfNotPets, length; j++); {
+//     for (let j = 0; j < arrayOfNotPets.length; j++); {
 //         new Product(
 //             this.name = arrayOfNotPets[j].name,
 //             this.type = arrayOfNotPets[j].type,

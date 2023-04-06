@@ -11,10 +11,16 @@
 }
 
 .stats__title {
-    margin: 0;
-    padding-top: 30px;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 40px;
+        line-height: 45px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+        border: 1px solid #3f1409;
+        width: 200px;
+        margin: 0 auto;
+        background-color: #f2e2d1;
+        border-radius: 10px;
 }
 
 .stats__container {
@@ -32,7 +38,14 @@
 
 .stats__dogbreeds-title, .stats__catbreeds-title {
     font-size: 20px;
-    line-height: 25px;
+        line-height: 25px;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #3f1409;
+        width: 300px;
+        margin: 0 auto;
+        background-color: #f2e2d1;
+        border-radius: 10px;
 }
 
 
