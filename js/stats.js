@@ -209,27 +209,27 @@ let petProfiles = [
 // Empty array to store unique breed names.
 let breedNames = [];
 
-// Empty array to store breed occurrances.
+
 let breedOccurrences = [];
 
-// Iterate through petProfiles to store breed occurances.
+
 for (let i = 0; i < petProfiles.length; i++){
     let pet = petProfiles[i];
 
-    // Retrieve the breed of the pet
+
     let breed = pet.breed;
 
-    // Check if breed is already in breedNames array.
+
     let breedIndex = breedNames.indexOf(breed);
 
     if (breedIndex === -1){
-        // Add the breed to the breedNames array
+
         breedNames.push(breed);
 
-        // Count for the new breed
+
         breedOccurrences.push(1);
     } else
-    // If breed is already in breedNames, incremement the count for that breed.
+
     breedOccurrences[breedIndex]++;
 }
 
