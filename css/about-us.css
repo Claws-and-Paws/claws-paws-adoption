@@ -56,40 +56,35 @@
     display: block;
 }
 
-/* .biographies {
-    width: 400px;
-    height: 300px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: rgba(77, 67, 63, 0.289);
-    color: white;
-    overflow: scroll;
-    margin: 0 auto;
-    margin-top: 35px;
-} */
+.biographies {
+    display: flex;
+    flex-direction: row;
+}
 
 #first-bio {
-    width: 400px;
+    width: 1800px;
     height: 300px;
     padding-left: 20px;
     padding-right: 20px;
     background-color: rgba(77, 67, 63, 0.289);
     color: white;
     overflow: scroll;
-    margin: 0 auto;
-    margin-top: 35px;
+    margin-left: 140px;
+    margin-top: 30px;
 }
 
 #second-bio {
-    width: 400px;
+    width: 1800px;
     height: 300px;
     padding-left: 20px;
     padding-right: 20px;
     background-color: rgba(77, 67, 63, 0.289);
     color: white;
     overflow: scroll;
-    margin: 0 auto;
-    margin-top: 35px;
+    margin-left: 1px;
+    margin-top: 30px;
+
+
 }
 
 .biographies h2 {
