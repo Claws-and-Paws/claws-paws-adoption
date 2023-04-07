@@ -230,6 +230,75 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
 
     petArray.push(this);
 
+    this.renderPetReqCard = function () {
+        let ourPets = document.querySelector(".results__container");
+
+        let petCard = document.createElement("div");
+        petCard.classList.add("our-pets__card");
+
+        let petName = document.createElement("h3");
+        petName.textContent = this.name;
+        petCard.appendChild(petName);
+
+        let petImg = document.createElement("img");
+        petImg.setAttribute("src", this.imgSrc);
+        petCard.appendChild(petImg);
+
+        let petType = document.createElement("p");
+        petType.textContent = `Type: ${this.type}`;
+        petCard.appendChild(petType);
+
+        let petGender = document.createElement("p");
+        petGender.textContent = `Gender: ${this.gender}`;
+        petCard.appendChild(petGender);
+
+        let petBreed = document.createElement("p");
+        petBreed.textContent = `Breed: ${this.breed}`;
+        petCard.appendChild(petBreed);
+
+        let petAge = document.createElement("p");
+        petAge.textContent = `Age: ${this.formattedAge}`;
+        petCard.appendChild(petAge);
+
+        let petKidFriendly = document.createElement("p");
+        petKidFriendly.textContent = `Kid Friendly: ${this.kidFriendly}`;
+        petCard.appendChild(petKidFriendly);
+
+        let petPetFriendly = document.createElement("p");
+        petPetFriendly.textContent = `Pet Friendly: ${this.petFriendly}`;
+        petCard.appendChild(petPetFriendly);
+//add the card to the page
+        ourPets.appendChild(petCard);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     this.renderPetCard = function () {
         let ourPets = document.querySelector(".our-pets__container");
 
@@ -275,7 +344,6 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
         petCard.appendChild(likeButton);
 
         likeButton.addEventListener("click", () => {
-            // Check if card already exists in favorites
             let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
             let cardExists = false;
             for (let i = 0; i < favorites.length; i++) {
@@ -303,9 +371,6 @@ function Pet(name, imgSrc, type, gender, breed, age, kidFriendly, petFriendly) {
         });
 
     };
-    //add pets to local storage maybe not yet
-    // let petsLocalStorage = JSON.stringify(petArray);
-    // localStorage.setItem('petObjects',   petsLocalStorage);
 }
 
 //adding second constructor for taking new pet requests from customer
@@ -352,10 +417,10 @@ function renderPetProfiles() {
 }
 
 // Iterate over petProfiles array and create pet objects
-petProfiles.forEach(function (petProfile) {
-    let pet = new Pet(petProfile.name, petProfile.imgSrc, petProfile.type, petProfile.gender, petProfile.breed, petProfile.age, petProfile.kidFriendly, petProfile.petFriendly);
-    pet.renderPetCard();
-});
+// petProfiles.forEach(function (petProfile) {
+//     let pet = new Pet(petProfile.name, petProfile.imgSrc, petProfile.type, petProfile.gender, petProfile.breed, petProfile.age, petProfile.kidFriendly, petProfile.petFriendly);
+//     pet.renderPetCard();
+// });
 
 
 function handleNewSubmit(event) {
@@ -368,7 +433,7 @@ function handleNewSubmit(event) {
     // console.log(type);
 
 
-    let age = document.getElementById('pet-age').value;
+    let age = parseInt(document.getElementById('pet-age').value);
     // console.log(age);
 
     let breed = document.getElementById('breed').value;
@@ -383,50 +448,6 @@ function handleNewSubmit(event) {
     // console.log('newnewnew pet request', typeof newPetRequest);
     form.reset();
 };
-
-
-
-
-// function renderResults() {
-
-//     let section = document.getElementById('results__container');
-//     for(let i = 0; i < Pet.petArray.length; i++); {
-//         let p = document.createElement('p');
-//         p.textContent = `${this.name} ${this.imgSrc} ${this.type} ${this.gender} ${this.breed} ${this.formattedAge} ${this.kidFriendly} ${this.petFriendly}`;
-
-//         console.log("🚀 ~ file: app.js:329 ~ renderResults ~    p.textContent :",    p.textContent )
-//     }
-
-// }
-
-
-
-let savedPetInfo = localStorage.getItem('petRequest');
-console.log('local storage', JSON.parse(savedPetInfo));
-
-// if (savedPetInfo) {
-//     let arrayOfNotPets = JSON.parse(savedPetInfo);
-//     for (let j = 0; j < arrayOfNotPets.length; j++); {
-//         new Product(
-//             this.name = arrayOfNotPets[j].name,
-//             this.type = arrayOfNotPets[j].type,
-//             this.gender = arrayOfNotPets[j].gender,
-//             this.breed = arrayOfNotPets[j].breed,
-//             this.friendly = arrayOfNotPets[j].friendly
-//         )
-
-//     };
-
-// } else {
-//     petProfiles = [];
-
-
-
-// }
-
-
-
-
 
 
 
