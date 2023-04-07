@@ -1,6 +1,7 @@
 `use strict`
 console.log('file connected');
 
+// Array contaiing pet profiles (Objects with pet details).
 let petProfiles = [
     {
         name: 'Duke',
@@ -205,26 +206,34 @@ let petProfiles = [
 ];
 
 
+// Empty array to store unique breed names.
+let breedNames = [];
 
-// Count the occurrences of each breed
-const breedCounts = petProfiles.reduce(function (acc, pet) {
-    // If the breed is not already in the accumulator, initialize its count to 0
-    if (!acc.hasOwnProperty(pet.breed)) {
-        acc[pet.breed] = 0;
-    }
 
-    // Increment the count for the current pet's breed
-    acc[pet.breed] += 1;
+let breedOccurrences = [];
 
-    // Return the updated accumulator
-    return acc;
-}, {});
 
-// Create an array of breed names (from the keys of breedCounts)
-const breedNames = Object.keys(breedCounts);
+for (let i = 0; i < petProfiles.length; i++){
+    let pet = petProfiles[i];
 
-// Create an array of breed occurrences (from the values of breedCounts)
-const breedOccurrences = Object.values(breedCounts);
+
+    let breed = pet.breed;
+
+
+    let breedIndex = breedNames.indexOf(breed);
+
+    if (breedIndex === -1){
+
+        breedNames.push(breed);
+
+
+        breedOccurrences.push(1);
+    } else
+
+    breedOccurrences[breedIndex]++;
+}
+
+
 
 // Get the canvas element by its id to render the chart
 const ctx = document.getElementById('breedChart').getContext('2d');
@@ -236,7 +245,7 @@ const chart = new Chart(ctx, {
         datasets: [{
             label: 'Number of Pets Avaiable by Breed',
             data: breedOccurrences,
-            backgroundColor: 'rgba(205, 133, 63, 0.5)', 
+            backgroundColor: 'rgba(205, 133, 63, 0.5)',
             borderColor: 'rgb(245, 245, 245)',
             borderWidth: 2
         }]
