@@ -243,7 +243,7 @@ const chart = new Chart(ctx, {
     data: {
         labels: breedNames,
         datasets: [{
-            label: 'Number of Pets Avaiable by Breed',
+            label: 'Number of Pets Available by Breed',
             data: breedOccurrences,
             backgroundColor: 'rgba(205, 133, 63, 0.5)',
             borderColor: 'rgb(245, 245, 245)',
